@@ -1,0 +1,34 @@
+@media screen and (max-width: 1600px)
+  .menu_small
+    width: 150px
+    .menu
+      &__phone
+        transform: scale(0)
+      &__button
+        transform: scale(0)
+      &__text
+        +fz(12)
+@media screen and (max-width: 992px)
+  .menu
+    &_small
+      width: 70px
+    &__svg
+      display: block
+    &__text
+      display: none
+      opacity: 0
+    &__item
+        a
+          left: 45%
+@media screen and (max-width: 768px)
+  .menu_small
+    width: 100%
+    left: -100%
+    .menu
+      &__phone
+        transform: scale(1)
+      &__button
+        transform: scale(1)
+      &__text
+        display: block
+        transform: scale(1)

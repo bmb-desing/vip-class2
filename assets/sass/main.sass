@@ -1,0 +1,45 @@
+@import "vars/index"
+@import "setting/index"
+@import "fonts"
+
+@import "mixin/index"
+@import "loader"
+@import "error-page"
+@import "header/header"
+@import "menu/index"
+@import "scroll"
+* 
+  box-sizing: border-box
+body
+  background-color: #000
+  line-height: 1.5
+  font-size: 16px
+  padding: 0
+  margin: 0
+.container
+  padding-left: 70px
+.section
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &_image
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    background-position: center
+  &__wrapper
+    margin: 0 auto
+    max-width: 1170px
+    width: 100%
+    display: flex
+    align-items: stretch
+
+@media screen and (max-width: 768px)
+  .container
+    padding-left: 0
+
+@import "slider/index"
+
+@import "form"
