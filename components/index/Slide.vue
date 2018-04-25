@@ -31,6 +31,23 @@
                     </div>
                 </div>
             </div>
+            <div class="carousel__event">
+                <div class="event">
+                    <h2 class="event__title">
+                        Акция!
+                    </h2>
+                    <div class="event__text">
+                        <p>
+                            Преобретите квартиру 
+                            до <b>25.05.2018</b> и получите 
+                            в подарок <b>бесплатный ремонт</b>
+                        </p>
+                    </div>
+                    <div class="event__link">
+                        <nuxt-link :to="'123'">Подробнее</nuxt-link>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
   </div>

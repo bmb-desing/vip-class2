@@ -19,6 +19,15 @@
                 </nuxt-link>
             </div>
             <div class="header__right">
+                <div class="header__adress">
+                    г. Севастополь, пр. Античный, 26, цокольный этаж
+                </div>
+                <div class="header__phone">
+                    <a href="tel:79788556184">+7 (978) 855-61-84 </a>
+                </div>
+                <div class="menu__button">
+                    <button @click="showForm('Обратный звонок')">Обратный звонок</button>
+                </div>
             </div>
         </div>
     </header>
@@ -35,7 +44,8 @@
         },
         methods: {
             ...mapMutations({
-                menuShow: 'mutationMenu'
+                menuShow: 'mutationMenu',
+                showForm: 'showForm'
             })
         }
     }

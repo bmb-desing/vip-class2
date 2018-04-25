@@ -9,6 +9,7 @@
                     zoom="14" 
                 >
                     <ymap-marker
+                        :markerId="index"
                         marker-type="placemark"
                         v-for="(marker, index) in markers"
                         :key="index"
@@ -64,6 +65,14 @@ export default {
     name: 'contacts',
     data() {
         return {
+            placemarks: [
+                {
+                    coords: [54.8, 39.8],
+                    properties: {}, // define properties here
+                    options: {}, // define options here
+                    clusterName: "1",
+                }
+            ],
             markers: [
                 {
                     coord: [44.594728, 33.437734],

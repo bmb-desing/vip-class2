@@ -1,5 +1,5 @@
 <template>
-    <div class="form">
+    <div class="form" ref="modal">
         <div class="form__wrapper">
             <div class="form__cross">
                 <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" class="form__svg" @click="closeForm" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
@@ -59,6 +59,7 @@
                 sendError: 'sendErrors',
             
             }),
+            
             submitForm: function(form) {
                 this.$validator.validateAll().then((result) => {
                     if(result) {
@@ -69,7 +70,31 @@
                     }
                 })
             }
+        },
+        mounted: function() { 
+            const modal = this.$refs.modal
+            const vm = this
+            modal.addEventListener('click', function(e) {
+                const target = e.target.className
+                if (target == 'form') {
+                    vm.closeForm()
+                }
+            })
+            document.addEventListener('keypress', function(e) {
+                const key = e.keyCode;
+                if(key == 27) {
+                    vm.closeForm()
+                }
+            })
+        },
+        beforeDestroy: function() {
+            const modal = this.$refs.modal
+            modal.removeEventListener('click', function() {
+                console.log('Успешно удален')
+            })
+            document.removeEventListener('keypress', function() {})
         }
+        
 	}
 </script>
 

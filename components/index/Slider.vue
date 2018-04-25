@@ -10,12 +10,11 @@
         </div>
 
         <div class="carousel__pagination">
-        <div class="carousel__pagination__item" v-for="(value, index) in sliders" :key="index">
-            <span :class="index == active ? 'active' : ''" @click="replaceActiveSlide(index)"></span>
+            <div class="carousel__pagination__item" v-for="(value, index) in sliders" :key="index">
+                <span :class="index == active ? 'active' : ''" @click="replaceActiveSlide(index)"></span>
+            </div>
         </div>
-      </div>
     </div>
-  
 </template>
 <script>
     import Slide from './Slide.vue'

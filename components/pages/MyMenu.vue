@@ -403,6 +403,30 @@
         <div class="menu__button">
             <button @click="showForm('Обратный звонок')">Обратный звонок</button>
         </div>
+		<div class="menu__socials">
+			<ul>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa fa-vk"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="fa fa-skype"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
     </div>
 </template>
 
