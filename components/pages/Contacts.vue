@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container container_contacts">
       <div class="section">
             <no-ssr>
                 <yandex-map
@@ -33,22 +33,23 @@
                     </div>
                     <hr>
                     <div class="contacts__block">
-                        <h3>&laquo; ЖЕМЧУЖИНА СЕВАСТОПОЛЯ &raquo;</h3>
+                        <h3>&laquo;ЖЕМЧУЖИНА СЕВАСТОПОЛЯ&raquo;</h3>
                         <p>г. Севастополь, пр.Античный 26</p>
                     </div>
+                    <hr>
                     <div class="contacts__block">
                         <h3>Главный офис</h3>
                         <p>г. Севастополь, ул. Кесаева 14-Г</p>
                         <p class="contacts__small">
-                            Email: <a href="mailto:vipclass@bk.ru">vipclass@bk.ru</a><br/>
-                            Skpe: vipclass.vipclass
+                            <span>Email:</span> <a href="mailto:vipclass@bk.ru">vipclass@bk.ru</a><br/>
+                            <span>Skpe:</span> vipclass.vipclass
                         </p>
                         <p class="contacts__small">
-                            Тел: <a href="tel:78692416000">+7 (8692) 41-60-00</a><br/>
-                            Моб.тел: <a href="tel:79788556184">+7 (978) 855-61-84</a>
+                            <span>Тел:</span> <a href="tel:78692416000">+7 (8692) 41-60-00</a><br/>
+                            <span>Моб.тел:</span> <a href="tel:79788556184">+7 (978) 855-61-84</a>
                         </p>
                         <p class="contacts__small">
-                            Отдел продаж: <a href="tel:797888814180">+7 (978) 881-41-80</a>
+                            <span>Отдел продаж:</span> <a href="tel:797888814180">+7 (978) 881-41-80</a>
                         </p>
                         <p class="contacts__small">
                             Режим работы: <br/>

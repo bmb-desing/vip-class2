@@ -96,3 +96,39 @@
         font-weight: 300
         padding-left: 15px
         padding-right: 30px
+
+@media screen and (max-width: 1150px)
+    .event
+        display: none
+@media screen and (max-width: 768px)
+    .carousel
+        &__container
+            flex-wrap: wrap
+        &__left
+            flex-basis: 100% 
+            padding-top: 50px 
+        &__right
+            flex-basis: 100%
+            align-self: flex-start
+        &__images
+            width: 50%
+@media screen and (max-width: 550px)
+    .carousel
+        &__images
+            display: none
+        &__content
+            padding-top: 40px
+        &__subtitle
+            +fz(16)
+        &__title
+            +fz(22)
+        &__link
+            +fz(16)
+            height: 35px
+            line-height: 35px
+        &__pagination
+            left: 50%
+            transform: translateX(-50%)
+        &__bottom
+            height: 75px
+            overflow: auto
