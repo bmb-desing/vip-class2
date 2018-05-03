@@ -3,10 +3,10 @@
       <div class="section">
             <no-ssr>
                 <yandex-map
-                    :coords="[44.590761, 33.479262]"
+                    :coords="[44.594030, 33.453514]"
                     style="width: 100%; height: 100vh; min-height: 100vh"
                     :placemarks="placemarks"
-                    zoom="14" 
+                    zoom="16" 
                 >
                     <ymap-marker
                         :markerId="index"

@@ -23,7 +23,15 @@ body
   display: flex
   justify-content: center
   align-items: center
-
+  background-color: #fff
+  &-image
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+  &_pad
+    padding: 30px 10px
+    flex-wrap: wrap
+    min-height: auto
   &_image
     background-repeat: no-repeat
     -webkit-background-size: cover
@@ -35,6 +43,13 @@ body
     width: 100%
     display: flex
     align-items: stretch
+  &__title
+    text-transform: uppercase
+    color: #000
+    +fz(24)
+    font-weight: 900
+    flex-basis: 100%
+    text-align: center
 @media screen and (max-width: 1600px)
   .container
     padding-left: 150px  
@@ -45,7 +60,10 @@ body
   .container
     padding-left: 0
 
+
 @import "slider/index"
 @import "components/index"
+@import "objects/index"
+@import "content/index"
 
 @import "form"

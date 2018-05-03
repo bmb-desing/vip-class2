@@ -1,0 +1,44 @@
+.info
+    text-align: center
+    padding: 20px 0
+    h3
+        padding: 0
+        margin: 0
+        text-transform: uppercase
+        +fz(16)
+        font-weight: 700
+    b
+        +fz(18)
+        font-weight: 700
+    span
+        +fz(14)
+        font-weight: 500
+        padding: 0 5px
+    a
+        text-decoration: none
+        color: #ffffff
+        font-weight: 100
+        +fz(14)
+        display: block
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 15px
+            height: 10px
+            background-image: url(~/assets/img/arrow.png)
+    &_red
+        background-color: #d00a05
+        color: #ffffff
+    &_darkred
+        background-color: #bb0904
+        color: #ffffff
+    &_blue
+        text-align: left
+        color: #ffffff
+        background-color: #0d4772
+        padding: 20px 15px
+        position: relative
