@@ -74,6 +74,7 @@ export default {
                     clusterName: "1",
                 }
             ],
+            
             markers: [
                 {
                     coord: [44.594728, 33.437734],
@@ -102,6 +103,6 @@ export default {
                 }
             ]
         }
-    }
+    },
 }
 </script>

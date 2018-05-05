@@ -51,16 +51,24 @@
 						{{item.name}}
 					</h3>
 					<div class="list__images">
-						<img :src="val.image" :alt="val.description" v-for="(val, k) in item.items" :key="k">
+						<img :src="val.image" :alt="val.description" v-for="(val, k) in item.items" :key="k" @click="getImages(index, k)">
 					</div>
 				</div>
 			</div>
 			
 		</div>
+		<carousel 
+			v-if="images" 
+			:images="images" 
+			:active="activeSlide"
+			@closeCarousel="close"
+		></carousel>
 	</div>
 </template>
 
 <script>
+	import Carousel from '~/components/stroitelstvo/Carousel.vue'
+	import {mapGetters, mapMutations} from 'vuex'
 	export default {
 		name: "stroitelstvo",
 		head() {
@@ -68,8 +76,13 @@
 				title: 'Строительство'
 			}
 		},
+		components: {
+			Carousel
+		},
 		data() {
 			return {
+				images: null,
+				activeSlide: 0, 
 				objects : [
 					{
 						name: 'Многоквартирный жилой дом в г. Севастополе по пр. Античный',
@@ -77,35 +90,35 @@
 						items: [
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки1',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки2',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки3',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки4',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки5',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки6',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки7',
 							},
 							{
 								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
+								description: 'Описание картинки8',
 							}
 						]
 					},
@@ -133,6 +146,26 @@
 					}
 				]
 			}
+		},
+		computed: {
+			...mapGetters({
+				getCarousel: 'showCarousel'
+			}),
+		},
+		methods: {
+			...mapMutations({
+				showCarousel: 'showCarousel'
+			}),
+			getImages(images, active) {
+				this.images = this.objects[images].items
+				this.activeSlide = active
+				return this
+			},
+			close() {
+				this.images = null
+				this.active = null
+				return this
+			},
 		}
 	}
 </script>

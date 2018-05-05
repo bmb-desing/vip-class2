@@ -44,7 +44,7 @@
 								V6h22v3c0,0.553,0.447,1,1,1h7c0.553,0,1-0.447,1-1V6h4v8H2V6z"/>
 						</g>
 					</svg>
-					<span class="menu__text">Новости</span>
+					<span class="menu__text">Акции</span>
 				</a>
 			</nuxt-link>
             <nuxt-link to="objects" tag="li" class="menu__item" @click.native="closeMenu">
@@ -398,7 +398,7 @@
             </nuxt-link>
         </ul>
         <div class="menu__phone">
-            <a href="tel:+79788884180">+7 (978) 888-41-80</a>
+            <a :href="'tel:' + setting.phone">{{setting.phone}}</a>
         </div>
         <div class="menu__button">
             <button @click="showForm('Обратный звонок')">Обратный звонок</button>
@@ -406,22 +406,22 @@
 		<div class="menu__socials">
 			<ul>
 				<li>
-					<a href="#" target="_blank">
+					<a :href="setting.facebook" target="_blank">
 						<i class="fa fa-facebook"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a :href="setting.vk" target="_blank">
 						<i class="fa fa-vk"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a :href="setting.twitter" target="_blank">
 						<i class="fa fa-twitter"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#" target="_blank">
+					<a :href="'skype:' + setting.skype" target="_blank">
 						<i class="fa fa-skype"></i>
 					</a>
 				</li>
@@ -436,7 +436,8 @@
 		name: "MyMenu",
         computed: {
             ...mapGetters({
-                showMenu: 'showMenu'
+				showMenu: 'showMenu',
+				setting: 'getSetting'
             }),
             menuType() {
                 return this.showMenu ? 'menu_big' : 'menu_small'

@@ -9,14 +9,17 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/sitemap": "^0.1.1",
+    "jquery": "^3.3.1",
     "nuxt": "^1.0.0",
     "nuxt-validate": "^0.1.1",
+    "vue-slick": "^1.1.12",
     "vue-yandex-maps": "^0.7.9",
     "vuebar": "0.0.18"
   },

@@ -32,6 +32,7 @@ body
     padding: 30px 10px
     flex-wrap: wrap
     min-height: auto
+    flex-wrap: wrap
   &_image
     background-repeat: no-repeat
     -webkit-background-size: cover
@@ -56,14 +57,16 @@ body
 @media screen and (max-width: 992px)
   .container
     padding-left: 70px
+    padding-top: 55px
+    &_contacts
+      padding-top: 0
 @media screen and (max-width: 768px)
   .container
     padding-left: 0
 
-
+@import "form"
 @import "slider/index"
 @import "components/index"
 @import "objects/index"
 @import "content/index"
 
-@import "form"

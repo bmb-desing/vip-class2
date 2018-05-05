@@ -113,9 +113,10 @@
 .form-leave-active
   opacity: 0
 
-
+@media screen and (max-width: 768px)
+  .form__svg
+    top: 10px
 @media screen and (max-height: 650px)
   .form
     overflow-y: auto
-  .form__svg
-    top: 50px
+    align-items: flex-start

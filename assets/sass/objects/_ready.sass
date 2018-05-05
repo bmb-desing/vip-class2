@@ -1,0 +1,67 @@
+.section
+  &_ready
+    min-height: auto
+    flex-wrap: wrap
+    h2
+      flex-basis: 100%
+      text-align: center
+      font-weight: 900
+      +fz(24)
+      color: #131313
+      text-transform: uppercase
+.ready
+  flex-basis: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  padding: 0 20px 20px
+  &__item
+    background-color: #0b3f66
+    flex-basis: 24%
+    height: auto
+    overflow: hidden
+    cursor: pointer
+    color: #ffffff
+    padding: 30px
+    transition: all .5s
+    position: relative
+    max-height: 200px
+    margin-bottom: 20px
+    &::after
+      content: ''
+      position: absolute
+      width: 10px
+      background-repeat: no-repeat
+      top: 40px
+      right: 30px
+      height: 5px
+      transition: all .5s
+      background-image: url(~/assets/img/ready.png)
+    &.show
+      background-color: #0d4772
+      box-shadow: 0px 12px 8px 0 rgba(0, 0, 0, 0.25)
+      max-height: 2000px
+      &::after
+        transform: rotate(180deg)
+    h3
+      font-weight: 700
+      +fz(16)
+      text-transform: uppercase
+      margin: 0
+      padding: 0
+      padding-right: 20px
+
+  &__text
+    padding-top: 20px
+    max-height: 1660px
+    overflow: auto
+@media screen and (max-width: 1170px)
+  .ready
+    &__item
+      flex-basis: 49%
+@media screen and (max-width: 768px)
+  .ready
+    &__item
+      flex-basis: 100%
+

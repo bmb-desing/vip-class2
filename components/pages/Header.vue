@@ -20,10 +20,10 @@
             </div>
             <div class="header__right">
                 <div class="header__adress">
-                    г. Севастополь, пр. Античный, 26, цокольный этаж
+                    {{setting.cellAdress}}
                 </div>
                 <div class="header__phone">
-                    <a href="tel:79788556184">+7 (978) 855-61-84 </a>
+                    <a :href="'tel:' + setting.phone">{{setting.phone}}</a>
                 </div>
                 <div class="menu__button">
                     <button @click="showForm('Обратный звонок')">Обратный звонок</button>
@@ -39,7 +39,8 @@
         name: 'myHeader',
         computed: {
             ...mapGetters({
-                activeMenu: 'showMenu'
+                activeMenu: 'showMenu',
+                setting: 'getSetting'
             })
         },
         methods: {

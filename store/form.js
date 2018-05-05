@@ -4,6 +4,7 @@ export default {
 	state: {
 		showForm: false,
 		showError: false,
+		showCarousel: false,
 		form: {
 			name: {
 				placeholder: 'Ваше имя*',
@@ -31,6 +32,9 @@ export default {
 		sendForm: false
 	},
 	getters: {
+		showCarousel: (state) => {
+			return state.showCarousel
+		},
 		showForm: (state) => {
 			return state.showForm
 		},
@@ -53,6 +57,9 @@ export default {
 				state.theme = payload,
 				state.showForm = true
 			]
+		},
+		showCarousel: (state) => {
+			return state.showCarousel != state.showCarousel
 		},
 		closeForm: (state) => {
 			return state.showForm = false
