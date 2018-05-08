@@ -4,6 +4,7 @@
     align-items: center
     overflow: auto
 
+
 .sketch
     flex-basis: 100%
     &__title
@@ -101,7 +102,9 @@
             text-align: center
         &__text
             margin: 0 auto
-
+@media screen and (max-height: 768px)
+  .form_object
+    align-items: flex-start
 @media screen and (max-width: 768px)
     .sketch
         &__phone

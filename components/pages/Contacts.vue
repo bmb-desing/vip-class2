@@ -6,7 +6,7 @@
                     :coords="[44.594030, 33.453514]"
                     style="width: 100%; height: 100vh; min-height: 100vh"
                     :placemarks="placemarks"
-                    zoom="16" 
+                    zoom="15"
                 >
                     <ymap-marker
                         :markerId="index"
@@ -74,7 +74,7 @@ export default {
                     clusterName: "1",
                 }
             ],
-            
+
             markers: [
                 {
                     coord: [44.594728, 33.437734],

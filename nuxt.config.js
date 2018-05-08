@@ -26,11 +26,13 @@ module.exports = {
   ],
   loading: 'components/Loading.vue',
 	router: {
-		linkActiveClass: 'active'
+		linkActiveClass: 'active',
+
 	},
 	plugins: [
 		'~/plugins/vuebar',
-		{src: '~/plugins/map', ssr: true}
+    { src: '~/plugins/carousel', ssr: false },
+		{ src: '~/plugins/map', ssr: true }
 	],
 	/*
   ** Global CSS
@@ -43,7 +45,8 @@ module.exports = {
   */
 	build: {
 		vendor: [
-			'vue-yandex-maps'
+			'vue-yandex-maps',
+      '~/plugins/carousel'
 		],
 		extractCSS: true,
 		//vendor: ['vuebar'],

@@ -8,7 +8,7 @@
 @import "header/header"
 @import "menu/index"
 @import "scroll"
-* 
+*
   box-sizing: border-box
 body
   background-color: #000
@@ -28,6 +28,11 @@ body
     background-repeat: no-repeat
     background-size: cover
     background-position: center
+  &-bg-top
+    -webkit-background-size: contain
+    background-size: contain
+    background-position: top center
+    background-color: #fff
   &_pad
     padding: 30px 10px
     flex-wrap: wrap
@@ -51,15 +56,13 @@ body
     font-weight: 900
     flex-basis: 100%
     text-align: center
+
 @media screen and (max-width: 1600px)
   .container
-    padding-left: 150px  
+    padding-left: 150px
 @media screen and (max-width: 992px)
   .container
     padding-left: 70px
-    padding-top: 55px
-    &_contacts
-      padding-top: 0
 @media screen and (max-width: 768px)
   .container
     padding-left: 0
@@ -69,4 +72,8 @@ body
 @import "components/index"
 @import "objects/index"
 @import "content/index"
+.content__events
+  background-color: transparent
+  .event
+    display: block
 

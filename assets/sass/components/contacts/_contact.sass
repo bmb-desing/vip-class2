@@ -1,6 +1,6 @@
 .container_contacts
     position: relative
-.contacts 
+.contacts
     position: absolute
     bottom: 0
     right: 5%
@@ -47,12 +47,14 @@
         height: 2px
         color: #d00a05
 @media screen and (max-height: 650px)
-    .container_contacts 
+    .container_contacts
         min-height: 650px
         .ymap-container
             min-height: 650px !important
 @media screen and (max-width: 768px)
-    .container_contacts 
+    .ymap-container
+      display: none
+    .container_contacts
         .section
             flex-wrap: wrap
     .contacts
