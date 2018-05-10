@@ -50,7 +50,7 @@
 
 <script>
 	export default {
-		name: "events:event",
+		name: "events-event",
     head() {
 		  return {
 		    title: 'Проверка заголовка'

@@ -1,7 +1,7 @@
 <script src="../../stroy/store/index.js"></script>
 <template>
     <div class="el1" v-bar style="height: 100vh;">
-        <div class="el2">
+        <div class="el2 scroller" >
             <my-header/>
             <my-menu/>
             <nuxt/>

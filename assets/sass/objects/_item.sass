@@ -1,0 +1,141 @@
+.object
+  &__title
+    background-color: rgba(#09314f, .9)
+    height: 70px
+    line-height: 70px
+    text-transform: uppercase
+    text-align: center
+    +fz(34)
+    letter-spacing: .9px
+    padding-left: 0
+    &_red
+      max-width: 336px
+      background-color: rgba(#d00a05, .9)
+      +fz(26)
+      height: 50px
+      line-height: 50px
+  &__bold
+    background-color: rgba(#0a5791, .9)
+    text-transform: uppercase
+    +fz(18)
+    padding: 10px
+    color: #ffffff
+    font-weight: 600
+    line-height: 42px
+  &__text
+    margin-top: 0
+    background-color: rgba(#fff, .9)
+  &__left
+    flex-basis: 50%
+    &_big
+      flex-basis: 70%
+  &__right
+    flex-basis: 25%
+    min-width: 240px
+  button
+    border: none
+    cursor: pointer
+    margin-top: 30px
+  &__nav
+    ul
+      list-style-type: none
+      max-width: 200px
+      margin: 0 auto
+      margin-right: 0
+      padding: 0
+      background-color: rgba(#fff, .9)
+      li
+        position: relative
+        cursor: pointer
+        height: 53px
+        line-height: 53px
+        text-transform: uppercase
+        color: #1f1f1f
+        font-weight: 500
+        padding: 0 10px
+        &::after
+          opacity: 0
+          position: absolute
+          content: ''
+          top: 0
+          bottom: 0
+          left: -21px
+          height: 53px
+          width: 24px
+          background-image: url(~/assets/img/object-active.png)
+          background-repeat: no-repeat
+        &.active
+          background-color: #d00a05
+          font-weight: 700
+          color: #fff
+          &::after
+            opacity: 1
+
+.documentation
+  &__title
+    padding-left: 0
+    padding-bottom: 20px
+  &__text
+    background-color: rgba(#fff, .7)
+    max-width: 600px
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      max-width: 500px
+      li
+        position: relative
+        margin-bottom: 10px
+        a
+          text-decoration: none
+          color: #010101
+          display: block
+          position: relative
+          +fz(16)
+          font-weight: 300
+          min-height: 17px
+          padding-right: 30px
+          &::after
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            width: 15px
+            height: 10px
+            background-image: url(~/assets/img/arrow-right.png)
+            background-repeat: no-repeat
+.developer
+  &__span
+    background-color: #d00a05
+    padding: 0 10px
+    font-weight: 900
+    text-shadow: none
+@media screen and (max-width: 1400px)
+  .object
+    &__title
+      +fz(28)
+@media screen and (max-width: 1200px)
+  .object
+    &__title
+      +fz(22)
+    &__left
+      flex-basis: 70%
+
+@media screen and (max-width: 992px)
+  .object
+    &__nav
+      display: none
+    &__right
+      display: none
+    &__left
+      flex-basis: 100%
+@media screen and (max-width: 768px)
+  .object
+    &__title
+      +fz(22)
+      line-height: 1.5
+      height: auto
+  .developer
+    &__span
+      display: inline-block

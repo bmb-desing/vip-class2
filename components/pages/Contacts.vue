@@ -1,5 +1,5 @@
 <template>
-  <div class="container container_contacts">
+  <div class="container container_contacts" id="cont">
       <div class="section">
             <no-ssr>
                 <yandex-map
