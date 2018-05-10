@@ -18,7 +18,7 @@
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
-          <object-nav :active="active" @changeActive="changeSection"></object-nav>
+          <object-nav active="#about-object" @changeActive="changeSection"></object-nav>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
-          <object-nav :active="active" @changeActive="changeSection"></object-nav>
+          <object-nav active="#choice-apartment" @changeActive="changeSection"></object-nav>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
-          <object-nav :active="active" @changeActive="changeSection"></object-nav>
+          <object-nav active="#construction-progress" @changeActive="changeSection"></object-nav>
         </div>
       </div>
     </div>
@@ -111,7 +111,7 @@
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
-          <object-nav :active="active" @changeActive="changeSection"></object-nav>
+          <object-nav active="#documentation" @changeActive="changeSection"></object-nav>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
-          <object-nav :active="active" @changeActive="changeSection"></object-nav>
+          <object-nav active="#about-developer" @changeActive="changeSection"></object-nav>
         </div>
       </div>
     </div>
@@ -161,7 +161,6 @@
     data() {
 		  return {
 		    type: this.$route.params.item,
-        active: '#about-object'
       }
     },
     head() {
@@ -193,71 +192,8 @@
         }
         console.log(section)
         const scroll = VueScrollTo.scrollTo(section, 500, options)
-        this.active = section
       }
     },
-    mounted: function () {
-      var container = this.$refs.container
-      var height = container.scrollHeight
-      var sectionHeigth = height / 6
-      var scroller = document.getElementsByClassName('scroller')
-      scroller = scroller[0]
-      var vm = this
-      window.addEventListener('resize', function (e) {
-        container = this.$refs.container
-        height = container.scrollHeight
-        sectionHeigth = height / 6
-      })
-      scroller.addEventListener('scroll', function (e) {
-        setTimeout(function () {
-          const scrollHeigth = scroller.scrollTop
-          const scr = parseInt(scrollHeigth / sectionHeigth)
-          console.log(scr)
-          switch (scr) {
-            case 0 : {
-              vm.active = '#about-object';
-              return
-            }
-            case 1 : {
-              vm.active = '#choice-apartment';
-              return
-            }
-            case 2 : {
-              vm.active = '#construction-progress';
-              return
-            }
-            case 3 : {
-              vm.active = '#documentation';
-              return
-            }
-            case 4 : {
-              vm.active = '#about-developer';
-              return
-            }
-            case 5 : {
-              vm.active = '#cont';
-              return
-            }
-            case 6 : {
-              vm.active = '#cont';
-              return
-            }
-            default: {
-              vm.active = '#about-object';
-              return
-            }
-
-          }
-        }, 500)
-      })
-
-    },
-    beforeDestroy: function() {
-      var scroller = document.getElementsByClassName('scroller')
-      scroller[0].removeEventListener('scroll', function() {
-        console.log('Успешно удален')
-      })
-  }
 	}
 </script>
 
