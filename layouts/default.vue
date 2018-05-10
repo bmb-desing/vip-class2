@@ -27,11 +27,17 @@ export default {
         UserForm,
         Contacts
 	},
-    computed: {
-        ...mapGetters({
-            showForm: 'showForm'
-        })
-    },
+  computed: {
+      ...mapGetters({
+          showForm: 'showForm'
+      })
+  },
+  mounted() {
+    this.$router.afterEach((r) => {
+      const scroller = document.getElementsByClassName('scroller')
+      scroller[0].scrollTop = 0
+    })
+  }
 }
 </script>
 

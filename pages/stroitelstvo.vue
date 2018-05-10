@@ -73,6 +73,7 @@
 	import {mapGetters, mapMutations} from 'vuex'
 	export default {
 		name: "stroitelstvo",
+    scrollToTop: true,
 		head() {
 			return {
 				title: 'Строительство'

@@ -27,9 +27,6 @@ module.exports = {
   loading: 'components/Loading.vue',
 	router: {
 		linkActiveClass: 'active',
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    }
 	},
 	plugins: [
 		'~/plugins/vuebar',
