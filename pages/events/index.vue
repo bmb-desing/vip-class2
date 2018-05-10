@@ -2,7 +2,7 @@
     <div class="container">
       <div class="section section-image section-bg-top" style="background-image: url(img/events-bg.jpg)">
         <div class="events">
-          <h1 class="events__title">Акции от<br/><span>«VIP Class»</span></h1>
+          <h1 class="events__title">Акции</h1>
           <div class="events__container">
             <div class="events__item" v-for="event in events" :key="event.id" :style="'background-image:' + 'url(' + event.thumbnail + ')'" >
               <nuxt-link :to="'events/' + event.alias" class="events__content">

@@ -3,7 +3,7 @@
     <div class="section section-image section-bg-top" style="background-image: url(img/news-bg.jpg); background-color: #e1e1e1;-webkit-background-size: cover;background-size: cover;">
       <div class="content">
         <div class="content__left">
-          <h1 class="events__title events__title_news">Новости<br/><span>«VIP Class»</span></h1>
+          <h1 class="events__title events__title_news">Новости</h1>
           <div class="news">
             <div class="news__item" v-for="item in news" :key="item.id">
               <nuxt-link :to="'news/' + item.alias"><h2 class="news__title">{{item.title}}</h2></nuxt-link>

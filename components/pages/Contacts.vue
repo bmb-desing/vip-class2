@@ -7,6 +7,7 @@
                     style="width: 100%; height: 100vh; min-height: 100vh"
                     :placemarks="placemarks"
                     zoom="15"
+                    :scroll-zoom="false"
                 >
                     <ymap-marker
                         :markerId="index"

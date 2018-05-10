@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ce0c83-6962-44f1-a5c8-8e57df89d82a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/objects/_item.vue" afterPath="$PROJECT_DIR$/pages/objects/_item.vue" />
+      <change beforePath="$PROJECT_DIR$/components/pages/Contacts.vue" afterPath="$PROJECT_DIR$/components/pages/Contacts.vue" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" afterPath="$PROJECT_DIR$/nuxt.config.js" />
+      <change beforePath="$PROJECT_DIR$/pages/events/index.vue" afterPath="$PROJECT_DIR$/pages/events/index.vue" />
+      <change beforePath="$PROJECT_DIR$/pages/news/index.vue" afterPath="$PROJECT_DIR$/pages/news/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_item.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_item.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/objects/_item.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
@@ -33,12 +36,58 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/news/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/events/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contacts.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="_item.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/objects/_item.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
               <caret line="140" column="27" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
-              <folding />
+              <folding>
+                <marker date="1525954225346" expanded="true" signature="2887:3019" ph="..." />
+                <marker date="1525954225346" expanded="true" signature="2978:3019" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,15 +138,12 @@
         <option value="$PROJECT_DIR$/assets/sass/objects/_sketch.sass" />
         <option value="$PROJECT_DIR$/pages/design.vue" />
         <option value="$PROJECT_DIR$/assets/sass/components/event/_events.sass" />
-        <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/components/pages/MyMenu.vue" />
         <option value="$PROJECT_DIR$/pages/_events/_event.vue" />
         <option value="$PROJECT_DIR$/assets/sass/slider/_index.sass" />
         <option value="$PROJECT_DIR$/pages/_events/index.vue" />
         <option value="$PROJECT_DIR$/pages/events.vue" />
-        <option value="$PROJECT_DIR$/pages/events/index.vue" />
         <option value="$PROJECT_DIR$/assets/sass/components/_index.sass" />
-        <option value="$PROJECT_DIR$/pages/news/index.vue" />
         <option value="$PROJECT_DIR$/assets/sass/components/news/_index.sass" />
         <option value="$PROJECT_DIR$/assets/sass/content/_index.sass" />
         <option value="$PROJECT_DIR$/assets/sass/components/contacts/_contact.sass" />
@@ -107,12 +153,15 @@
         <option value="$PROJECT_DIR$/assets/sass/main.sass" />
         <option value="$PROJECT_DIR$/plugins/scroll.js" />
         <option value="$PROJECT_DIR$/layouts/object.vue" />
-        <option value="$PROJECT_DIR$/components/pages/Contacts.vue" />
         <option value="$PROJECT_DIR$/layouts/default.vue" />
         <option value="$PROJECT_DIR$/pages/events/_event.vue" />
         <option value="$PROJECT_DIR$/components/objects/ObjectNav.vue" />
         <option value="$PROJECT_DIR$/assets/sass/objects/_item.sass" />
         <option value="$PROJECT_DIR$/pages/objects/_item.vue" />
+        <option value="$PROJECT_DIR$/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/pages/news/index.vue" />
+        <option value="$PROJECT_DIR$/pages/events/index.vue" />
+        <option value="$PROJECT_DIR$/components/pages/Contacts.vue" />
       </list>
     </option>
   </component>
@@ -344,12 +393,12 @@
       <workItem from="1525767440104" duration="3832000" />
       <workItem from="1525938826023" duration="6768000" />
       <workItem from="1525946278189" duration="1789000" />
-      <workItem from="1525948575682" duration="5415000" />
+      <workItem from="1525948575682" duration="6260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35348000" />
+    <option name="totallyTimeSpent" value="36193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,7 +443,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/events/index.vue</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -452,6 +509,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -531,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/_events/_event.vue" />
     <entry file="file://$PROJECT_DIR$/assets/sass/slider/_index.sass">
       <provider selected="true" editor-type-id="text-editor">
@@ -586,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -611,18 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/news/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="57" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/content/_index.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -637,16 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/events/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/objects/_index.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -658,6 +688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,14 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1352">
-          <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/pages/UserForm.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -759,7 +782,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="140" column="27" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1525954225346" expanded="true" signature="2887:3019" ph="..." />
+            <marker date="1525954225346" expanded="true" signature="2978:3019" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -783,6 +809,41 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#9893#9926#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/news/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/events/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
