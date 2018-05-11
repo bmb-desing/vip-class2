@@ -22,8 +22,7 @@
                     </div>
                     <div class="carousel__images">
                         <div class="carousel__image" v-for="(value, k) in images" :key="k">
-        
-                            <img :src="value" alt="123" v-if="k <= 1">
+                            <img :src="value" alt="123" v-if="k != pos">
                         </div>
                     </div>
                     <div class="carousel__bottom">
@@ -38,8 +37,8 @@
                     </h2>
                     <div class="event__text">
                         <p>
-                            Преобретите квартиру 
-                            до <b>25.05.2018</b> и получите 
+                            Преобретите квартиру
+                            до <b>25.05.2018</b> и получите
                             в подарок <b>бесплатный ремонт</b>
                         </p>
                     </div>

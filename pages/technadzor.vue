@@ -6,21 +6,15 @@
 					<h1 class="content__title">Технадзор и обследование зданий:</h1>
 					<div class="content__text">
 						<div class="el1" v-bar style="height: 460px;">
-        					<div class="el2">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-
-							</div>
+              <div class="el2">
+                <p>Специалисты объединения "VIPCLASS" осуществляют технический надзор за соблюдением технологии и качеством выполнения всех строительно-монтажных работ и их соответствии утвержденной проектно-сметной документации, за точным соблюдением строительных норм, правил и технических условий выполнения и приемки общестроительных, монтажных, отделочных и специальных работ, контролируют выполнение утвержденного заказчиком графика строительно-монтажных работ и сроков поставки на объект материалов и оборудования, а также:</p>
+							  <ul>
+                  <li>принимают участие совместно с проектной организацией в рассмотрении предложений подрядчика по повышению качества, снижению стоимости и сокращению сроков выполняемых работ; </li>
+                  <li>проверяют наличие паспортов, результатов лабораторных анализов и испытаний материалов, деталей и конструкций, применяемых при строительстве объекта; </li>
+                  <li>принимают участие в освидетельствовании и оформлении актами скрытых и специальных работ;</li>
+                  <li>выполняют обследование зданий, сооружений, конструкций на сейсмическую устойчивость.</li>
+                </ul>
+              </div>
 						</div>
 					</div>
 				</div>

@@ -6,7 +6,7 @@
                     :coords="[44.594030, 33.453514]"
                     style="width: 100%; height: 100vh; min-height: 100vh"
                     :placemarks="placemarks"
-                    zoom="15"
+                    zoom="13"
                     :scroll-zoom="false"
                 >
                     <ymap-marker

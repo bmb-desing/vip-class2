@@ -24,27 +24,7 @@
     </div>
     <!--Первая секция конец-->
     <!--Вторая секция-->
-    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="choice-apartment">
-      <div class="content object">
-        <div class="content__left object__left">
-          <h1 class="content__title object__title">«ЖЕМЧУЖИНА СЕВАСТОПОЛЯ»</h1>
-          <div class="content__text object__text">
-            <div class="el1" v-bar style="height: 205px;">
-              <div class="el2" style="padding-right: 12px;">
-                Новый современный жилой комплекс «Жемчужина Севастополя» состоит из десятиэтажных монолитно-каркасных домов, внутренние перегородки из газобетона, где цокольные этажи предназначены для офисных помещений, магазинов, аптек, фитнес-центров и т.д.
-                Расположен комплекс в экологически чистом месте г.Севастополя по пр.Античный в районе бухты «Омега». Месторасположение жилого комплекса привлекательно тем, что находится в спокойном районе города в шаговой доступности от городских пляжей, а также знаменитого Парка Победы, где жители и гости Севастополя любят проводить свое время.
-                Новый современный жилой комплекс «Жемчужина Севастополя» состоит из десятиэтажных монолитно-каркасных домов, внутренние перегородки из газобетона, где цокольные этажи предназначены для офисных помещений, магазинов, аптек, фитнес-центров и т.д.
-                Новый современный жилой комплекс «Жемчужина Севастополя» состоит из десятиэтажных монолитно-каркасных домов, внутренние перегородки из газобетона, где цокольные этажи предназначены для офисных помещений, магазинов, аптек, фитнес-центров и т.д.
-              </div>
-            </div>
-          </div>
-          <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
-        </div>
-        <div class="content__right  content__events object__right">
-          <object-nav active="#choice-apartment" @changeActive="changeSection"></object-nav>
-        </div>
-      </div>
-    </div>
+    <objects></objects>
     <!--Вторая секция конец-->
     <!--Третья секция-->
     <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="construction-progress">
@@ -152,11 +132,13 @@
 <script>
   import {mapMutations} from 'vuex'
   import VueScrollTo from 'vue-scrollto'
+  import Objects from '~/components/objects/Index.vue'
   import ObjectNav from '~/components/objects/ObjectNav.vue'
 	export default {
 		name: "objects-item",
     components: {
 		  ObjectNav,
+      Objects
     },
     data() {
 		  return {

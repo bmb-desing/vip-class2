@@ -6,20 +6,17 @@
             <h1 class="content__title">Строительство:</h1>
             <div class="content__text">
               <div class="el1" v-bar style="height: 460px;">
-                    <div class="el2">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-
+                <div class="el2">
+                  <p>Объединение VIPCLASS работает на строительном рынке с 2005 года и производит полный комплекс строительно-монтажных работ, конечным результатом которых является полностью готовое здание или сооружение.</p>
+                  <p>Специалисты объединения - квалифицированные, опытные профессионалы - проявляют скрупулёзность и точность в выполнении поставленных задач.</p>
+                  <p>Основные принципы работы Объединения VIPCLASS:</p>
+                  <ul>
+                    <li>гибкая ценовая политика</li>
+                    <li>контроль качества и сроков строительства</li>
+                    <li>строгое соблюдение норм строительного законодательства</li>
+                    <li>применение инновационных технологий</li>
+                    <li>индивидуальные условия для любого клиента</li>
+                  </ul>
                 </div>
               </div>
             </div>

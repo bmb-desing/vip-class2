@@ -7,19 +7,8 @@
 					<div class="content__text">
 						<div class="el1" v-bar style="height: 460px;">
 							<div class="el2">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit sequi pariatur, deserunt exercitationem illum esse veniam modi facere ea unde eum saepe aut in nesciunt doloremque, corporis veritatis officia!</p>
-
+                <p>Наши опытные, квалифицированные специалисты - архитекторы и инженеры-проектировщики осуществляют проектирование различных объектов архитектуры, с использованием инновационных проектных решений. Для достижения наилучших результатов в нашем распоряжении современное лицензионное программное обеспечение - для визуализации, расчетов конструкций и т.д. Основой нашей работы являются профессиональные знания, опирающиеся на наш собственный и мировой опыт в области архитектуры и дизайна. Специалисты объединения постоянно работают над совершенствованием проектных технологий, изучают лучшие образцы мирового строительства и применяют изящные технические решения с целью удовлетворения самого требовательного заказчика.</p>
+                <p>Заказчиками нашей компании являются не только частные лица - но и государственные организации. Так, нашими специалистами были успешно исполнены многие проекты, в том числе проект детского сада на 200 мест в с. Кичменгский Городок в Вологодской области, изолятора временного содержания в г. Донской в Тульской области, реконструкции здания суда в г. Севастополе, общежития КНИТУ-КАИ в г. Казань.</p>
 							</div>
 						</div>
 					</div>
@@ -107,13 +96,7 @@
             title: 'Предпроектные \n' +
             'работы',
             show: false,
-            text: 'разработка предварительных архитектурных предложений; \n' +
-            '\n' +
-            'разработка предложений по расположению объектов на земельных участках; \n' +
-            '\n' +
-            'проработка инженерной характеристики объекта и составление опросных листов и другие виды работ, необходимые для начала процесса проектирования; \n' +
-            '\n' +
-            'помощь в получении технических условий по инженерному обеспечению объектов архитектуры'
+            text: 'разработка предварительных архитектурных предложений; разработка предложений по расположению объектов на земельных участках; проработка инженерной характеристики объекта и составление опросных листов и другие виды работ, необходимые для начала процесса проектирования; помощь в получении технических условий по инженерному обеспечению объектов архитектуры'
           },
           {
             title: 'Комплексное \n' +
@@ -122,13 +105,7 @@
             'объектов \n' +
             'строительства',
             show: false,
-            text: 'разработка предварительных архитектурных предложений; \n' +
-            '\n' +
-            'разработка предложений по расположению объектов на земельных участках; \n' +
-            '\n' +
-            'проработка инженерной характеристики объекта и составление опросных листов и другие виды работ, необходимые для начала процесса проектирования; \n' +
-            '\n' +
-            'помощь в получении технических условий по инженерному обеспечению объектов архитектуры'
+            text: 'индивидуальные жилые дома, коттеджные поселки; многоквартирные жилые дома; объекты коммерческой недвижимости - торговые центры, офисные помещения; рестораны, кафе, бары; гостиничные, торгово-складские комплексы и т.д'
           },
           {
             title: 'Авторский \n' +
@@ -136,26 +113,14 @@
             'объектами \n' +
             'строительства',
             show: false,
-            text: 'разработка предварительных архитектурных предложений; \n' +
-            '\n' +
-            'разработка предложений по расположению объектов на земельных участках; \n' +
-            '\n' +
-            'проработка инженерной характеристики объекта и составление опросных листов и другие виды работ, необходимые для начала процесса проектирования; \n' +
-            '\n' +
-            'помощь в получении технических условий по инженерному обеспечению объектов архитектуры'
+            text: 'Тут текста не было'
           },
           {
             title: 'Согласование \n' +
             'проектной \n' +
             'документации',
             show: false,
-            text: 'разработка предварительных архитектурных предложений; \n' +
-            '\n' +
-            'разработка предложений по расположению объектов на земельных участках; \n' +
-            '\n' +
-            'проработка инженерной характеристики объекта и составление опросных листов и другие виды работ, необходимые для начала процесса проектирования; \n' +
-            '\n' +
-            'помощь в получении технических условий по инженерному обеспечению объектов архитектуры'
+            text: 'вплоть до получения разрешения на строительно-монтажные работы'
           }
         ],
 				sketch : [
