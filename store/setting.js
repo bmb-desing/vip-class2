@@ -1,5 +1,3 @@
-import {state} from "./index";
-
 export default {
     state: {
         setting: {
@@ -15,7 +13,7 @@ export default {
             address: 'г. Севастополь, ул. Кесаева 14-Г',
             cellAdress: 'г. Севастополь, пр.Античный 26, (цокольный этаж)'
         }
-        
+
     },
     getters: {
        getSetting: (state) => {

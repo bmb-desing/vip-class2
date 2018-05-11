@@ -1,6 +1,10 @@
 .filter
+  position: relative
+  .content
+    flex-wrap: wrap
   &__header
     width: 100%
+    padding-bottom: 20px
   &__container
     width: 100%
     display: flex
@@ -49,6 +53,99 @@
     &.active
       background-color: #d00a05
 
+
+
+.filter
+  &__content
+    width: 100%
+    flex-basis: 100%
+    display: flex
+    justify-content: stretch
+    align-items: flex-start
+    flex-wrap: wrap
+  &__visible
+    background-color: #fff
+    padding: 10.5px 0
+    padding-right: 25px
+    text-align: center
+    span
+      display: block
+  &__item
+    position: relative
+    &_small
+      flex-basis: (100 / (4/(1/6)) * 3.5) + 0%
+    &_big
+      flex-basis: (100 / (2/(1/6)) * 2.5) + 0%
+  &__drop
+    width: 25px
+    position: absolute
+    right: 0
+    top: 0
+    height: 60px
+    background-color: rgba(#b2120e, .7)
+    cursor: pointer
+    transition: all .25s
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-repeat: no-repeat
+      background-position: center
+      background-image: url(~/assets/img/arrow-drop.png)
+      transition: all .25s
+      opacity: .7
+    &:hover
+      background-color: rgba(#b2120e, .8)
+    &.active
+      background-color: rgba(#b2120e, 1)
+      &::after
+        opacity: 1
+        transform: rotate(180deg)
+  &__dropdown
+    transition: all .5s
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0px
+    z-index: 4
+    background-color: #fff
+    ul
+      padding: 0
+      margin: 0
+      list-style-type: none
+      text-align: center
+      position: relative
+      li
+        padding-bottom: 10px
+        padding-right: 25px
+        cursor: pointer
+        &:last-child
+          padding-bottom: 0
+  &__value
+    font-weight: 700
+    +fz(14)
+  &__span
+    +fz(12)
+    font-weight: 300
+  &__range
+    background-color: #fff
+    position: absolute
+    z-index: 4
+    top: 100%
+    left: 0
+    right: 0
+    text-align: center
+    p
+      padding: 0
+      margin: 5px 0
+      +fz(14)
+      font-weight: 300
+    input
+      padding: 0 5px
+      margin-left: 5px
 @media screen and (max-width: 768px)
   .filter
     &__right

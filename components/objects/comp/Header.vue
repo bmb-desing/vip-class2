@@ -40,7 +40,7 @@
 <script>
 	export default {
 	  props: ['type'],
-		name: "header",
+		name: "filter-header",
     methods: {
 	    change(type) {
 	      this.$emit('changeType', type)
