@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ce0c83-6962-44f1-a5c8-8e57df89d82a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/objects/_filter.sass" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/objects/Index.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/objects/comp/Filter.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/components/objects/comp/Header.vue" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/components/event/_events.sass" afterPath="$PROJECT_DIR$/assets/sass/components/event/_events.sass" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/objects/_index.sass" afterPath="$PROJECT_DIR$/assets/sass/objects/_index.sass" />
-      <change beforePath="$PROJECT_DIR$/components/index/Slide.vue" afterPath="$PROJECT_DIR$/components/index/Slide.vue" />
       <change beforePath="$PROJECT_DIR$/components/pages/Contacts.vue" afterPath="$PROJECT_DIR$/components/pages/Contacts.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/events/index.vue" afterPath="$PROJECT_DIR$/pages/events/index.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/objects/_item.vue" afterPath="$PROJECT_DIR$/pages/objects/_item.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/objects/index.vue" afterPath="$PROJECT_DIR$/pages/objects/index.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/sketching.vue" afterPath="$PROJECT_DIR$/pages/sketching.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/stroitelstvo.vue" afterPath="$PROJECT_DIR$/pages/stroitelstvo.vue" />
-      <change beforePath="$PROJECT_DIR$/pages/technadzor.vue" afterPath="$PROJECT_DIR$/pages/technadzor.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -102,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_events.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_events.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/components/event/_events.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -132,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contacts.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Contacts.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="-1190">
+              <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -194,7 +178,6 @@
         <option value="$PROJECT_DIR$/assets/sass/objects/_filter.sass" />
         <option value="$PROJECT_DIR$/components/objects/Index.vue" />
         <option value="$PROJECT_DIR$/components/index/Slide.vue" />
-        <option value="$PROJECT_DIR$/components/pages/Contacts.vue" />
         <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/pages/objects/index.vue" />
         <option value="$PROJECT_DIR$/pages/sketching.vue" />
@@ -202,6 +185,7 @@
         <option value="$PROJECT_DIR$/pages/stroitelstvo.vue" />
         <option value="$PROJECT_DIR$/pages/events/index.vue" />
         <option value="$PROJECT_DIR$/assets/sass/components/event/_events.sass" />
+        <option value="$PROJECT_DIR$/components/pages/Contacts.vue" />
       </list>
     </option>
   </component>
@@ -449,12 +433,12 @@
       <workItem from="1525938826023" duration="6768000" />
       <workItem from="1525946278189" duration="1789000" />
       <workItem from="1525948575682" duration="9147000" />
-      <workItem from="1526025653929" duration="7700000" />
+      <workItem from="1526025653929" duration="8269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46780000" />
+    <option name="totallyTimeSpent" value="47349000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -816,14 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/objects/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -892,6 +868,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/pages/Contacts.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1190">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding />
         </state>
       </provider>
