@@ -38,13 +38,18 @@
 </template>
 
 <script>
+  import {mapGetters, mapMutations} from 'vuex'
 	export default {
-	  props: ['type'],
 		name: "filter-header",
+    computed: {
+      ...mapGetters({
+        type: 'getType'
+      })
+    },
     methods: {
-	    change(type) {
-	      this.$emit('changeType', type)
-      }
+      ...mapMutations({
+        change: 'changeType'
+      })
     }
 	}
 </script>

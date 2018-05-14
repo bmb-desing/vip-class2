@@ -1,0 +1,82 @@
+.object-table
+  width: 100%
+  max-width: 100%
+  border: none
+  border-spacing: 0
+  margin-top: 20px
+  background-color: #fff
+  white-space: nowrap
+  border-collapse: collapse
+  th
+    +fz(17)
+    height: 50px
+    line-height: 50px
+    text-transform: uppercase
+    font-weight: 700
+    border-bottom: 2px solid #d00a05
+    padding: 5px
+  td
+    height: 35px
+    line-height: 35px
+    text-align: center
+    padding: 5px
+    border-collapse: collapse
+  tbody
+    tr
+      &:nth-child(even)
+        background-color: #e0e0e0
+      &:nth-child(odd)
+        background-color: #fff
+      &:last-child
+        td
+          padding-bottom: 10px
+  button
+    display: inline-block
+    border: none
+    color: #ffffff
+    text-transform: uppercase
+    height: 30px
+    line-height: 30px
+    font-weight: 700
+    cursor: pointer
+    background-color: #d00a05
+  tr
+    button
+      &:first-child
+        margin-right: 5px
+
+
+.table-responsive
+  display: block
+  width: 100%
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+  -ms-overflow-style: -ms-autohiding-scrollbar
+
+@media screen and (max-width: 1200px)
+  .filter__range
+    height: 60px
+    input
+      margin: 0
+@media screen and (max-width: 850px)
+  .filter__value
+    +fz(12)
+  .filter__visible
+    padding-top: 12px
+    padding-bottom: 12px
+@media screen and (max-width: 650px)
+  .filter__item
+    &_small
+      flex-basis: 100%
+    &_big
+      flex-basis: 100%
+  .filter__value
+    +fz(12)
+  .filter__dropdown
+    position: relative
+    .el1
+      height: auto !important
+  .filter__range
+    position: relative
+    p
+      margin-top: 0
