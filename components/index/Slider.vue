@@ -5,6 +5,7 @@
             :images="getImagesSlider" :pos="index"
             :length="sliders.length-1"
             :style="{width: slideWidth, left: getPosition(index)}"
+            :event="event"
             @shangeSlide="replaceActiveSlide"
             ></slide>
         </div>
@@ -19,7 +20,7 @@
 <script>
     import Slide from './Slide.vue'
     export default {
-        props: ['sliders'],
+        props: ['sliders', 'event'],
         name: 'slider',
         components: {
             Slide
@@ -39,7 +40,7 @@
                 return sliderImages
             },
             sliderWidth() {
-                return this.sliders.length * 100 + '%' 
+                return this.sliders.length * 100 + '%'
             },
             slideWidth() {
                 return  100 / this.sliders.length + '%'
@@ -55,17 +56,17 @@
             replaceActiveSlide(slide) {
                 if(slide < 0) {
                     this.active = this.sliders.length - 1
-                    this.right = this.sliders.length - 1 
+                    this.right = this.sliders.length - 1
                 }
                 else if(slide >= this.sliders.length) {
                     this.active = 0
-                    this.right = 0  
+                    this.right = 0
                 }
                 else {
                     this.active = slide
                     this.right = slide
                 }
-                
+
                 return this
             }
         }

@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="section section-image" style="background-image: url(img/technadzor.jpg)">
+		<div class="section section-image" style="background-image: url(/img/technadzor.jpg)">
 			<div class="content">
 				<div class="content__left">
 					<h1 class="content__title">Проектирование:</h1>

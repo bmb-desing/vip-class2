@@ -1,7 +1,7 @@
 <template>
     <main class="container">
         <div class="section section-slider" >
-            <slider :sliders="slider"></slider>
+            <slider :sliders="slider" :event="event"></slider>
         </div>
 
     </main>
@@ -11,7 +11,11 @@
 import Slider from '~/components/index/Slider.vue'
 export default {
 
-	async asyncData () {
+	async asyncData ({app}) {
+	  const event = await app.$axios.get('/events/get-first')
+    return {
+	    event: event.data
+    }
 	},
     data() {
 		return {

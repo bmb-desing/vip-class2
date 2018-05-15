@@ -36,14 +36,11 @@
                         Акция!
                     </h2>
                     <div class="event__text">
-                        <p>
-                            Преобретите квартиру
-                            до <b>25.05.2018</b> и получите
-                            в подарок <b>бесплатный ремонт</b>
+                        <p v-html="event.link">
                         </p>
                     </div>
                     <div class="event__link">
-                        <nuxt-link :to="'123'">Подробнее</nuxt-link>
+                        <nuxt-link :to="'/events/' + event.alias">Подробнее</nuxt-link>
                     </div>
                 </div>
             </div>
@@ -53,7 +50,7 @@
 </template>
 <script>
     export default {
-        props: ['slide', 'images', 'pos', 'length'],
+        props: ['slide', 'images', 'pos', 'length', 'event'],
         name: 'slide-item',
         computed: {
             getBackground() {

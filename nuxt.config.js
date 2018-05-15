@@ -24,6 +24,10 @@ module.exports = {
       }
     ]
   ],
+  axios: {
+    host: 'localhost',
+    port: '3001/api'
+  },
   loading: 'components/Loading.vue',
 	router: {
 		linkActiveClass: 'active',
@@ -31,7 +35,8 @@ module.exports = {
 	plugins: [
 		'~/plugins/vuebar',
     { src: '~/plugins/carousel', ssr: false },
-		{ src: '~/plugins/map', ssr: true }
+		{ src: '~/plugins/map', ssr: true },
+    '~/plugins/axios'
 	],
 	/*
   ** Global CSS

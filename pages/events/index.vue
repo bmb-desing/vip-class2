@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-      <div class="section section-image section-bg-top" style="background-image: url(img/events-bg.jpg)">
+      <div class="section section-image section-bg-top" style="background-image: url(/img/events-bg.jpg)">
         <div class="events">
           <h1 class="events__title">Акции</h1>
           <div class="events__container">
-            <div class="events__item" v-for="event in events" :key="event.id" :style="'background-image:' + 'url(' + event.thumbnail + ')'" >
+            <div class="events__item" v-for="event in events" :key="event.id" :style="'background-image:' + 'url(' + event.image + ')'" >
               <nuxt-link :to="'events/' + event.alias" class="events__content">
                 <h2>{{event.title}}</h2>
                 <div class="events__text" v-html="event.shortText"></div>
@@ -22,10 +22,19 @@ export default {
   name: 'events',
   head() {
     return {
-      title: 'Акции'
+      title: 'Акции',
+      meta: [
+        {hid: 'description', name: 'description', content: 'Список акций проводимых компанией «VIP CLASS»' },
+      ]
     }
   },
-  data() {
+  async asyncData({app}) {
+    const events = await app.$axios.get('/events')
+    return {
+      events: events.data
+    }
+  }
+  /*data() {
     return {
       events: [
         {
@@ -45,6 +54,6 @@ export default {
         },
       ]
     }
-  }
+  }*/
 }
 </script>

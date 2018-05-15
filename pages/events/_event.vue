@@ -1,45 +1,27 @@
 <template>
   <div class="container">
-    <div class="section section-image" :style="'background-image:' + 'url(' + background + ')'">
+    <div class="section section-image" :style="'background-image:' + 'url(' + event.image + ')'">
       <div class="content">
         <div class="content__left">
-          <h1 class="content__title">{{title}}</h1>
+          <h1 class="content__title">{{event.title}}</h1>
           <div class="content__text">
             <div class="el1" v-bar style="height: 460px;">
-              <div class="el2" v-html="text">
+              <div class="el2" v-html="event.text">
               </div>
             </div>
           </div>
         </div>
         <div class="content__right content__events">
-          <div class="event">
+          <div class="event" v-for="item in otherEvent" :key="item.id">
             <h2 class="event__title">
               Акция!
             </h2>
             <div class="event__text">
-              <p>
-                Преобретите квартиру
-                до <b>25.05.2018</b> и получите
-                в подарок <b>бесплатный ремонт</b>
+              <p v-html="item.link">
               </p>
             </div>
             <div class="event__link">
-              <nuxt-link :to="'123'">Подробнее</nuxt-link>
-            </div>
-          </div>
-          <div class="event">
-            <h2 class="event__title">
-              Акция!
-            </h2>
-            <div class="event__text">
-              <p>
-                Преобретите квартиру
-                до <b>25.05.2018</b> и получите
-                в подарок <b>бесплатный ремонт</b>
-              </p>
-            </div>
-            <div class="event__link">
-              <nuxt-link :to="'123'">Подробнее</nuxt-link>
+              <nuxt-link :to="'/events/' + item.alias">Подробнее</nuxt-link>
             </div>
           </div>
         </div>
@@ -53,24 +35,20 @@
 		name: "events-event",
     head() {
 		  return {
-		    title: 'Проверка заголовка'
+		    title: this.event.title,
+        meta: [
+          {hid: 'description', name: 'description', content: this.event.description },
+        ]
       }
     },
-    data() {
-		  return {
-		    title: 'Покупка квартиры с привлечением \n' +
-        'маткапитала',
-        text: '<p>Сегодня каждая российская семья, в которой появился второй (или более) ребенок, получает право один раз воспользоваться государственной поддержкой известной как материнский семейный капитал. В 2018 году его сумма составляет 453 026 рублей.</p>' +
-        '<p>Компания «VIP CLASS» хочет максимально облегчить способ оплаты своим клиентами, поэтому с готовностью принимает материнский капитал.</p>' +
-        '<h2>Материнский капитал + собственные сбережения</h2>' +
-        '<p>Очень простой способ использовать материнский капитал. Каковы ваши шаги? Вносите полную стоимость квартиры – свои средства + мат. капитал – и получаете скидку 2% на покупку квартиры как при 100% оплате!</p>' +
-        '<h2>Материнский капитал + рассрочка</h2>' +
-        '<p>Мы принимаем материнский капитал в качестве взноса по любой из рассрочек, доступных в нашей компании!\n' +
-        'Каковы Ваши шаги? Приходите, бронируйте квартиру, оплачиваете первый взнос, оформляейте перевод денег в Пенсионном фонде на следующий из взносов и платите рассрочку по графику. Всё! Без процентов и надбавок!\n' +
-        'Важное условие: ребенку, за которого положен материнский капитал, должно исполниться 3 года.</p>',
-        background: '/img/bg-index.jpg'
-      }
-    },
+    async asyncData({app, params}) {
+        const event = await app.$axios.get('/events/' + params.event)
+        const otherEvent = await app.$axios.get('/events/get-for-events/' + params.event)
+        return {
+          event: event.data,
+          otherEvent: otherEvent.data
+        }
+    }
 	}
 </script>
 

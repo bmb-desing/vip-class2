@@ -12,34 +12,16 @@
             </div>
           </div>
           <div class="content__right content__events">
-            <div class="event">
+            <div class="event" v-for="item in events" :key="item.id">
               <h2 class="event__title">
                 Акция!
               </h2>
               <div class="event__text">
-                <p>
-                  Преобретите квартиру
-                  до <b>25.05.2018</b> и получите
-                  в подарок <b>бесплатный ремонт</b>
+                <p v-html="item.link">
                 </p>
               </div>
               <div class="event__link">
-                <nuxt-link :to="'123'">Подробнее</nuxt-link>
-              </div>
-            </div>
-            <div class="event">
-              <h2 class="event__title">
-                Акция!
-              </h2>
-              <div class="event__text">
-                <p>
-                  Преобретите квартиру
-                  до <b>25.05.2018</b> и получите
-                  в подарок <b>бесплатный ремонт</b>
-                </p>
-              </div>
-              <div class="event__link">
-                <nuxt-link :to="'123'">Подробнее</nuxt-link>
+                <nuxt-link :to="'/events/' + item.alias">Подробнее</nuxt-link>
               </div>
             </div>
           </div>
@@ -54,6 +36,12 @@
     head() {
       return {
         title: 'Проверка заголовка'
+      }
+    },
+    async asyncData({app, params}) {
+      const events = await app.$axios.get('/events/get-for-news')
+      return {
+        events: events.data
       }
     },
     data() {
@@ -74,6 +62,6 @@
 	}
 </script>
 
-<style scoped>
+<style>
 
 </style>
