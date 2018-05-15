@@ -39,9 +39,6 @@
         }
       })
     },
-    beforeDestroy() {
-		  window.removeEventListener('resize')
-    }
 	}
 </script>
 
