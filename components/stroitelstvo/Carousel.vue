@@ -38,12 +38,11 @@ export default {
                 asNavFor: '.slick2',
             },
             slickOptions2: {
-                slidesToShow: 5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 arrows: false,
                 asNavFor: '.slick1',
                 focusOnSelect: true,
-                centerMode: true,
             },
         }
     },

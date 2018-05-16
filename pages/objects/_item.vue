@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="container" ref="container">
     <!--Первая секция-->
-    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="about-object">
+    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/object-1.jpg);" id="about-object">
       <div class="content object">
         <div class="content__left object__left">
           <h1 class="content__title object__title">«ЖЕМЧУЖИНА СЕВАСТОПОЛЯ»</h1>
@@ -27,7 +27,7 @@
     <objects></objects>
     <!--Вторая секция конец-->
     <!--Третья секция-->
-    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="construction-progress">
+    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/object-3.jpg);" id="construction-progress">
       <div class="content object">
         <div class="content__left object__left object__left_big">
           <h2 class="content__title object__title object__title_red">Ход строительства</h2>
@@ -41,7 +41,7 @@
     </div>
     <!--Третья секция конец-->
     <!--Четвертая секция-->
-    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="documentation">
+    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/object-4.jpg);" id="documentation">
       <div class="content object">
         <div class="content__left object__left">
           <h1 class="content__title documentation__title">Документация:</h1>
@@ -97,7 +97,7 @@
     </div>
     <!--Четвертая секция конец-->
     <!--Пятая секция-->
-    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/bg-index.jpg);" id="about-developer">
+    <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/object-5.jpg);" id="about-developer">
       <div class="content object">
         <div class="content__left object__left">
           <h1 class="content__title documentation__title">Объединение <span class="developer__span">«VIP CLASS»</span></h1>

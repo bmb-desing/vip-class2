@@ -48,8 +48,14 @@
               {{item.name}}
             </h3>
             <div class="list__images">
-              <img :src="val.image" :alt="val.description" v-for="(val, k) in item.items" :key="k" @click="getImages(index, k)">
+              <img :src="val.image" :alt="val.description" v-for="(val, k) in item.objectsImages" :key="k" @click="getImages(index, k)">
             </div>
+            <div v-if="item.imagesCount > item.objectsImages.length" class="menu__button">
+              <button @click="loadImages(item.objectsImages.length, item.id, index)">Загрузить еще</button>
+            </div>
+          </div>
+          <div v-if="objects.length < count" class="menu__button">
+            <button @click="loadObject(objects.length)">Загрузить еще</button>
           </div>
         </div>
 
@@ -73,78 +79,27 @@
     scrollToTop: true,
 		head() {
 			return {
-				title: 'Строительство'
+				title: 'Строительство',
+        meta: [
+          {hid: 'description', name: 'description', content: '«VIP CLASS» строительство объектов' },
+        ]
 			}
 		},
 		components: {
 			Carousel
 		},
+    async asyncData({app}) {
+		  const constr = await app.$axios.get('/construction');
+		  return {
+		    objects: constr.data.objects,
+        count: constr.data.count
+      }
+    },
 		data() {
 			return {
 				images: false,
 				activeSlide: 0,
-				objects : [
-					{
-						name: 'Многоквартирный жилой дом в г. Севастополе по пр. Античный',
-						id: 1,
-						items: [
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки1',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки2',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки3',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки4',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки5',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки6',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки7',
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки8',
-							}
-						]
-					},
-					{
-						name: 'Кофейня "Шоколадница" в гостинице Севастополь',
-						id: 2,
-						items: [
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
-							},
-							{
-								image: '/img/bg-index.jpg',
-								description: 'Описание картинки'
-							}
-						]
-					}
-				]
+				newObjects: []
 			}
 		},
 		computed: {
@@ -157,7 +112,7 @@
 				showCarousel: 'showCarousel'
 			}),
 			getImages(images, active) {
-				this.images = this.objects[images].items
+				this.images = this.objects[images].objectsImages
 				this.activeSlide = active
 				return this
 			},
@@ -166,6 +121,21 @@
 				this.active = null
 				return this
 			},
+      async loadImages(count, id, key) {
+			  const images = await this.$axios.get('/construction/images?skip=' + count + '&id=' +id)
+        images.data.map((image) => {
+          this.objects[key].objectsImages.push(image)
+        })
+        return this
+      },
+      async loadObject(length) {
+			  const newObjects = await this.$axios.get('/construction/objects?skip=' + length)
+        const objects = newObjects.data
+        objects.map((object) => {
+          this.objects.push(object)
+        })
+        return this
+      }
 		}
 	}
 </script>
