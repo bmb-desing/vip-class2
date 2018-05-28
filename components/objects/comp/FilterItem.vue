@@ -9,6 +9,7 @@
         <div class="el1" v-bar style="height: 150px;">
           <div class="el2">
             <ul>
+              <li @click="changeFilter(null)">Все</li>
               <li v-for="(item, k) in filter.values" :key="k" @click="changeFilter(item)">{{item}}</li>
             </ul>
           </div>

@@ -48,10 +48,10 @@
               {{item.name}}
             </h3>
             <div class="list__images">
-              <img :src="val.image" :alt="val.description" v-for="(val, k) in item.objectsImages" :key="k" @click="getImages(index, k)">
+              <img :src="val.image" :alt="val.description" v-for="(val, k) in item.objects_images" :key="k" @click="getImages(index, k)">
             </div>
-            <div v-if="item.imagesCount > item.objectsImages.length" class="menu__button">
-              <button @click="loadImages(item.objectsImages.length, item.id, index)">Загрузить еще</button>
+            <div v-if="item.imagesCount > item.objects_images.length" class="menu__button">
+              <button @click="loadImages(item.objects_images.length, item.id, index)">Загрузить еще</button>
             </div>
           </div>
           <div v-if="objects.length < count" class="menu__button">
@@ -112,7 +112,7 @@
 				showCarousel: 'showCarousel'
 			}),
 			getImages(images, active) {
-				this.images = this.objects[images].objectsImages
+				this.images = this.objects[images].objects_images
 				this.activeSlide = active
 				return this
 			},
@@ -124,7 +124,7 @@
       async loadImages(count, id, key) {
 			  const images = await this.$axios.get('/construction/images?skip=' + count + '&id=' +id)
         images.data.map((image) => {
-          this.objects[key].objectsImages.push(image)
+          this.objects[key].objects_images.push(image)
         })
         return this
       },

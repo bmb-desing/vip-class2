@@ -25,8 +25,9 @@ module.exports = {
     ]
   ],
   axios: {
-    host: 'localhost',
-    port: '3001/api'
+
+    host: 'api.vipclao5.beget.tech',
+    port: '80/api'
   },
   loading: 'components/Loading.vue',
 	router: {

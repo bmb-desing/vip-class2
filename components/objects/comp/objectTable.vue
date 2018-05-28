@@ -13,20 +13,23 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item) in objects" :key="item.id" v-if="item.cell">
+        <tr v-for="(item, k) in objects" :key="k" v-if="item.filter && item.free">
         <td>{{item.house}}</td>
-        <td>{{item.floor}}</td>
+        <td>{{item.floors}}</td>
         <td>{{item.section}}</td>
         <td>{{item.rooms}}</td>
         <td>{{item.area}} м<sup>2</sup></td>
         <td>{{item.price}} руб</td>
         <td>
-          <button>Подробнее</button>
+          <button @click="changeActiveRoom({
+            house: item.houseEl,
+            room: item.index
+          })">Подробнее</button>
         </td>
       </tr>
       </tbody>
     </table>
-    <div v-else>
+    <div v-else class="error">
       <p>С такими данными квартир нет</p>
     </div>
   </div>
@@ -35,15 +38,16 @@
 <script>
   import {mapGetters, mapMutations} from 'vuex'
 	export default {
-    props: ['objects'],
 		name: "object-table",
     computed: {
       ...mapGetters({
+        objects: 'getTableObject'
       })
     },
     methods: {
       ...mapMutations({
-        showForm: 'showForm'
+        showForm: 'showForm',
+        changeActiveRoom: 'changeActiveRoom',
       })
     }
 

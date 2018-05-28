@@ -56,16 +56,16 @@
       </div>
 		</div>
 		<div class="section section_sketch">
-			<div class="sketch" v-for="(items, index) in sketch" :key="items.id">
+			<div class="sketch" v-for="(items, k) in projects" :key="items.id">
 				<div class="sketch__title">
-					<h2>{{items.title}}</h2>
+					<h2>{{items.name}}</h2>
 				</div>
 				<div class="sketch__container">
 					<div class="list__images">
-						<img :src="image.image" :alt="image.title" v-for="image in items.images" :key="image.id" @click="selectActiveObject(image)">
+						<img :src="image.image" :alt="image.name" v-for="image in items.project_images" :key="image.id" @click="selectActiveObject(image)">
 					</div>
-					<div class="menu__button" v-if="items.images.length < items.count">
-						<button @click="getImages(index, items.id, items.images.length)">Загрузить еще</button>
+					<div class="menu__button" v-if="items.project_images.length != items.imagesCount">
+						<button @click="getImages(items.id, items.project_images.length, k)">Загрузить еще</button>
 					</div>
 				</div>
 			</div>
@@ -82,6 +82,12 @@
 		components: {
 			Objects
 		},
+    async asyncData({app}) {
+		  const projects = await app.$axios.get('/projects')
+      return {
+		    projects: projects.data.projects
+      }
+    },
 		head() {
 			return {
 				title: 'Проектирование'
@@ -123,147 +129,16 @@
             text: 'вплоть до получения разрешения на строительно-монтажные работы'
           }
         ],
-				sketch : [
-					{
-						title: 'Бюджетные проекты',
-						count: 20,
-						id: 1,
-						images: [
-							{
-								id: 1,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 2,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 3,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 4,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							}
-						]
-					},
-					{
-						title: 'Коммерческие проекты',
-						count: 10,
-						id: 2,
-						images: [
-							{
-								id: 1,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 2,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 3,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 4,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 5,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 6,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 7,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							},
-							{
-								id: 8,
-								image: '/img/bg-index.jpg',
-								title: 'Индивидуальный жилой дом',
-								area: 200,
-								rooms: 8,
-								floors: 2,
-								price: 2500000,
-								text: 'АРХИТЕКТУРНЫЙ ПАСПОРТ АДАПТАЦИЯ ФУНДАМЕНТА ПАКЕТ ТЕПЛЫЙ ПОЛ'
-							}
-						]
-					}
-				]
 			}
 		},
 		methods: {
-			getImages(index, id, length) {
-				//@TODO Добавить получение картинок с сервера
+      async getImages(id, length, index) {
+        const newProj = await this.$axios.get('/projects/add?skip=' + length + '&id=' +id)
+        console.log(this.projects)
+        const project = newProj.data
+        project.map(item => {
+          this.projects[index].project_images.push(item)
+        })
 			},
 			selectActiveObject(object) {
 				this.activeObject = object

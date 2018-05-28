@@ -1,0 +1,7 @@
+
+PassengerEnabled On
+PassengerNodejs /home/v/vipclao5/.local/bin/node
+PassengerAppRoot /home/v/vipclao5/vipclao5.beget.tech
+PassengerAppType node
+PassengerStartupFile node_modules/nuxt/bin/nuxt-start
+

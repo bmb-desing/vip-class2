@@ -314,7 +314,7 @@
 					<span class="menu__text">Новости</span>
 				</a>
 			</nuxt-link>
-            <nuxt-link to="design" tag="li" class="menu__item" @click.native="closeMenu">
+            <nuxt-link to="/design" tag="li" class="menu__item" @click.native="closeMenu">
                 <a>
                     <svg version="1.1" id="design" class="menu__svg menu__svg_design" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">

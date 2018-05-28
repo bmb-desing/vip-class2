@@ -1,0 +1,109 @@
+.room
+  background-color: #fff
+  position: absolute
+  z-index: 5
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center
+  display: flex
+  align-items: center
+  &__container
+    max-width: 1170px
+    margin: 0 auto
+    width: 100%
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 40px
+  &__cross
+    cursor: pointer
+    display: flex
+    text-align: center
+    align-items: center
+    b
+      color: #fff
+      padding-left: 10px
+      text-transform: uppercase
+      +fz(20)
+      font-weight: 900
+    span
+      background-color: #b2120e
+      display: block
+      width: 40px
+      color: #ffffff
+      +fz(20)
+      font-weight: 900
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__left
+    flex-basis: 50%
+    text-align: left
+    img
+      max-width: 100%
+      width: auto
+      max-height: 500px
+
+  &__right
+    flex-basis: 50%
+    text-align: left
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      span
+        +fz(24)
+        text-transform: uppercase
+        font-weight: 500
+      b
+        +fz(30)
+        font-weight: 700
+        padding-left: 5px
+      sup
+        font-weight: 700
+  &__button
+    padding-top: 20px
+    button
+      border: none
+      cursor: pointer
+@media screen and (max-width: 1170px)
+  .room
+    &__container
+      padding: 0 10px
+@media screen and (max-width: 768px)
+  .room
+    &__content
+      justify-content: center
+      flex-wrap: wrap
+    &__left
+      flex-basis: 100%
+      text-align: center
+      img
+        max-height: 250px
+
+    &__right
+      flex-basis: 100%
+      text-align: center
+      ul span
+        +fz(20)
+      ul b
+        +fz(22)
+    .carousel__link
+      margin: 0 auto
+@media screen and (max-width: 650px)
+  .room
+    &__header
+      flex-wrap: wrap
+    .room__header__left
+      flex-basis: 100%
+    .room__header__right
+      margin-top: 20px
+      flex-basis: 100%
+    .room__cross
+      justify-content: center

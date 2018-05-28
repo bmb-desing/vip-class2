@@ -12,7 +12,7 @@
                         </g>
                     </svg>
                 </div>
-                <h2>{{object.title}}</h2>
+                <h2>{{object.name}}</h2>
                 <div class="sketch__content">
                     <ul>
                         <li>
@@ -31,14 +31,14 @@
                             <span>Цена:</span>
                             <b class="big red">{{object.price}}</b> руб
                         </li>
-                    </ul>  
-                    <div class="sketch__text" v-html="object.text"></div>
+                    </ul>
+                    <div class="sketch__text" v-html="object.description"></div>
                 </div>
                 <div class="sketch__footer">
                     <a :href="'tel:' + setting.phone" class="sketch__phone">{{setting.phone}}</a>
                         <div class="menu__button menu__button_big">
                             <button @click="showForm('Заказать проект дома' + object.id)">Заказать проектирование</button>
-                        </div>  
+                        </div>
                 </div>
             </div>
       </div>
@@ -61,7 +61,7 @@ export default {
             showForm: 'showForm'
         })
     },
-    mounted: function() { 
+    mounted: function() {
         const modal = this.$refs.modal
         const vm = this
         modal.addEventListener('click', function(e) {

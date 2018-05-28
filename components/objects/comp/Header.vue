@@ -4,6 +4,11 @@
       <div class="filter__left">
         <h2 class="filter__title">«Жемчужина Севастополя»</h2>
       </div>
+      <div class="filter__center">
+        <div class="filter__button active" v-if="visual == 'house' && type == 'visual'" @click="changeType('street')">
+          <span>К выбору дома</span>
+        </div>
+      </div>
       <div class="filter__right">
         <div class="filter__button" @click="change('visual')" :class="type == 'visual' ? 'active' : ''">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -43,12 +48,14 @@
 		name: "filter-header",
     computed: {
       ...mapGetters({
-        type: 'getType'
+        type: 'getType',
+        visual: 'getVisualType'
       })
     },
     methods: {
       ...mapMutations({
-        change: 'changeType'
+        change: 'changeType',
+        changeType: 'changeVisualType'
       })
     }
 	}

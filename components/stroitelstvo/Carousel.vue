@@ -64,19 +64,13 @@ export default {
                 vm.closeForm()
             }
         })
-        document.addEventListener('keypress', function(e) {
-            const key = e.keyCode;
-            if(key == 27) {
-                vm.closeForm()
-            }
-        })
+
     },
     beforeDestroy: function() {
         const modal = this.$refs.modal
         modal.removeEventListener('click', function() {
             console.log('Успешно удален')
         })
-        document.removeEventListener('keypress', function() {})
     }
 }
 </script>
