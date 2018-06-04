@@ -3,13 +3,13 @@
       <div class="slider__wrapper">
         <slick ref="slick" class="slick1" :options="slickOptions" @init="handleInit">
           <div  v-for="(val, index) in images" :key="index">
-            <img :src="val.image" :alt="val.description">
-            <p>{{val.description}}</p>
+            <img :src="val.image" :alt="val.name">
+            <p>{{val.name}}</p>
           </div>
         </slick>
         <slick ref="slick2" class="slick2" :options="slickOptions2">
           <div  v-for="(val, index) in images" :key="index">
-            <img :src="val.image" :alt="val.description">
+            <img :src="val.image" :alt="val.name">
           </div>
         </slick>
         <div class="form__cross">

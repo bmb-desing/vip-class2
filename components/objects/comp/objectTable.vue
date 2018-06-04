@@ -15,16 +15,13 @@
       <tbody>
         <tr v-for="(item, k) in objects" :key="k" v-if="item.filter && item.free">
         <td>{{item.house}}</td>
-        <td>{{item.floors}}</td>
+        <td>{{item.floor}}</td>
         <td>{{item.section}}</td>
         <td>{{item.rooms}}</td>
         <td>{{item.area}} м<sup>2</sup></td>
         <td>{{item.price}} руб</td>
         <td>
-          <button @click="changeActiveRoom({
-            house: item.houseEl,
-            room: item.index
-          })">Подробнее</button>
+          <button @click="loadRoom({id: item.id, free: item.free})">Подробнее</button>
         </td>
       </tr>
       </tbody>
@@ -36,7 +33,7 @@
 </template>
 
 <script>
-  import {mapGetters, mapMutations} from 'vuex'
+  import {mapGetters, mapMutations, mapActions} from 'vuex'
 	export default {
 		name: "object-table",
     computed: {
@@ -48,7 +45,10 @@
       ...mapMutations({
         showForm: 'showForm',
         changeActiveRoom: 'changeActiveRoom',
-      })
+      }),
+      ...mapActions({
+        loadRoom: 'loadRoom'
+      }),
     }
 
 	}

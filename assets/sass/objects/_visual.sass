@@ -3,10 +3,15 @@
   text-align: center
   img
     max-width: 100%
-    width: 100%
+    width: auto
     position: relative
     z-index: 1
     vertical-align: top
+    &.no-full
+      max-width: none
+    &.full
+      max-width: 100%
+      width: 100%
   &__svg
     position: absolute
     z-index: 2
@@ -22,7 +27,7 @@
         fill: transparent
         transition: all .25s
         &:hover
-          fill: rgba(#000, .6)
+          fill: rgba(#d31511, .4)
   &__hover
     position: absolute
     background-color: #c2021d

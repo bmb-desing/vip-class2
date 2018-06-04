@@ -130,12 +130,13 @@
 </template>
 
 <script>
-  import {mapMutations} from 'vuex'
+  import {mapMutations, mapActions} from 'vuex'
   import VueScrollTo from 'vue-scrollto'
   import Objects from '~/components/objects/Index.vue'
   import ObjectNav from '~/components/objects/ObjectNav.vue'
 	export default {
 		name: "objects-item",
+    middleware: ['objects'],
     components: {
 		  ObjectNav,
       Objects
@@ -153,6 +154,9 @@
     methods: {
       ...mapMutations({
         showForm: 'showForm'
+      }),
+      ...mapActions({
+        loadObjects: 'loadObjects'
       }),
       changeSection(section) {
         const options = {

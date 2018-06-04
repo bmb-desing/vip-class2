@@ -8,7 +8,7 @@
         id="svg10"
         viewBox="0 0 4666.6665 2448">
         <path v-for="(item, k) in objects" :key="k"
-          :d="item.svg"
+          :d="item.svgTemplate"
           :data-house="k"
           @mouseenter="hoverHouse"
           @mouseleave="leaveHouse"
