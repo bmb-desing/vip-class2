@@ -28,12 +28,12 @@
 						<span>от</span> <b>6000</b> <span>руб/мес</span>
 					</div>
 					<div class="info info_blue">
-						<a href="#">
+						<a href="/pdf/lic_eng.pdf" target="_blank">
 							Сертификат инженера I категории <br/>IT №002927 от 20.08.2010г.
 						</a>
 					</div>
 					<div class="info info_blue">
-						<a href="#">
+						<a href="/pdf/lic_nad.pdf" target="_blank">
 							Сертификат на обследование <br/>
 							зданий и сооружений АЕ №000452 <br/>
 							от 23.07.2012г.

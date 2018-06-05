@@ -13,10 +13,6 @@ export default {
         size: 'small',
         text: 'корпус',
         values: [
-          'Античная 26',
-          'К-9',
-          'К-10',
-          'К-13'
         ]
       },
       floor: {
@@ -107,7 +103,6 @@ export default {
     },
     getSections: (state, getters) => {
       const house = getters.getActiveHouse
-      console.log(house)
     },
     getActiveRooms: (state, getters) => {
       const house = state.filters.house.value
@@ -144,7 +139,7 @@ export default {
           }
         })
       }
-      if (activeHouse) {
+      if (activeHouse != null) {
         state.object[activeHouse].rooms.map((item, k) => {
           item.filter = getters.getRoomByFilter(item)
           item.house = house
@@ -238,6 +233,9 @@ export default {
       if (state.filters.house.value) {
         state.visualType = 'house'
       }
+      else {
+        state.visualType = 'street'
+      }
       if (state.activeRoom) {
         state.visualType = 'room'
       }
@@ -292,20 +290,37 @@ export default {
       return state.activeRoom = null
     },
     loadObjects: (state, payload) => {
-      return state.object = payload
+      state.object = payload
+      var nameArr = []
+      payload.map((item) => {
+        nameArr.push(item.name)
+      })
+      state.filters.house.values = nameArr
     },
     loadRange: (state, payload) => {
       state.filters.area.values = [parseInt(payload.minArea), parseInt(payload.maxArea)]
       state.filters.price.values = [payload.minPrice, payload.maxPrice]
+      return state
     },
-
+    clearObject: (state, payload) => {
+      state.activeRoom = null
+      state.filters.house.value = null
+      state.filters.floor.value = null
+      state.filters.section.value = null
+      state.filters.apartment.value = null
+      state.filters.area.value.min = null
+      state.filters.area.value.max = null
+      state.filters.price.value.min = null
+      state.filters.price.value.max = null
+      state.visualType = 'street'
+      state.type = 'visual'
+      return state
+    }
   },
   actions: {
     loadRoom({commit}, payload) {
       if (payload.free) {
-        console.log(this)
         this.$axios.get('/rooms/' + payload.id).then(room => {
-          console.log(room)
           commit('changeActiveRoom', room.data)
         })
       }

@@ -23,24 +23,18 @@
 						<span>от</span> <b>240</b> <span>до</span> <b>900</b> <span>руб за м<sup>2</sup></span>
 					</div>
 					<div class="info info_blue">
-						<a href="#">
-							Сертификат на обследование <br/>
-							зданий и сооружений АЕ №000452 <br/>
-							от 23.07.2012г.
+						<a href="/pdf/lic_bud.pdf" target="_blank">
+              Лицензия на проектные работы<br/> АВ №587591 от 15.06.2011г
 						</a>
 					</div>
 					<div class="info info_blue">
-						<a href="#">
-							Сертификат на обследование <br/>
-							зданий и сооружений АЕ №000452 <br/>
-							от 23.07.2012г.
+						<a href="/pdf/svid.pdf" target="_blank">
+              Свидетельство о допуске<br/> к определенным видам работ члена СРО
 						</a>
 					</div>
 					<div class="info info_blue">
-						<a href="#">
-							Сертификат на обследование <br/>
-							зданий и сооружений АЕ №000452 <br/>
-							от 23.07.2012г.
+						<a href="/pdf/lic_obst.png" target="_blank">
+              Сертификат на проектирование<br/> в части обеспечения механического сопротивления<br/> и стойкости АР №001015 от 20.06.2012г.
 						</a>
 					</div>
 				</div>
@@ -62,7 +56,9 @@
 				</div>
 				<div class="sketch__container">
 					<div class="list__images">
-						<img :src="image.image" :alt="image.name" v-for="image in items.project_images" :key="image.id" @click="selectActiveObject(image)">
+            <div class="list__image" v-for="image in items.project_images" :key="image.id">
+              <img :src="image.image" :alt="image.name"  @click="selectActiveObject(image)">
+            </div>
 					</div>
 					<div class="menu__button" v-if="items.project_images.length != items.imagesCount">
 						<button @click="getImages(items.id, items.project_images.length, k)">Загрузить еще</button>

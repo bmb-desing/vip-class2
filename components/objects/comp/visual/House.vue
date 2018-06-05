@@ -75,7 +75,7 @@
           textsItems.forEach((item, index) => {
             item.setAttribute('style', svgAttrs[index])
           })
-        }, 150)
+        }, 250)
       }
     },
     mounted: function () {

@@ -5,7 +5,7 @@
             <my-header/>
             <my-menu/>
             <nuxt/>
-            <contacts></contacts>
+            <contacts v-if="showContact"></contacts>
 
             <transition name="form">
                 <user-form v-if="showForm"/>
@@ -21,6 +21,11 @@ import UserForm from '~/components/pages/UserForm.vue'
 import Contacts from '~/components/pages/Contacts.vue'
 import {mapGetters} from 'vuex'
 export default {
+  data() {
+    return {
+      showContact: true,
+    }
+  },
 	components: {
 		MyHeader,
         MyMenu,
@@ -34,6 +39,13 @@ export default {
   },
   mounted() {
     this.$router.afterEach((r) => {
+      if (this.$route.path.indexOf('events') != -1 || this.$route.path.indexOf('news') != -1) {
+        this.showContact = false
+      }
+      else {
+        this.showContact = true
+      }
+      console.log(this.$route.path.indexOf('events') != -1)
       const scroller = document.getElementsByClassName('scroller')
       scroller[0].scrollTop = 0
     })

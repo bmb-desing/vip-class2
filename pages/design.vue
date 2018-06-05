@@ -23,7 +23,10 @@
         </div>
         <div class="sketch__container">
           <div class="list__images">
-            <img :src="image.image" :alt="image.name" v-for="(image, k) in design" :key="image.id" @click="selectDesign(k)">
+              <div class="list__image" v-for="(image, k) in design" :key="image.id">
+                <img :src="image.image" :alt="image.name"  @click="selectDesign(k)">
+              </div>
+
           </div>
           <div class="menu__button" v-if="design.length < count">
             <button @click="loadImages(design.length)">Загрузить еще</button>

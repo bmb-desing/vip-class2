@@ -32,6 +32,12 @@
         <div class="content__left object__left object__left_big">
           <h2 class="content__title object__title object__title_red">Ход строительства</h2>
           <b class="object__bold">Стройка в режиме Online</b>
+          <div class="translation">
+            <a href="http://ipcamlive.com/omega2a13" target="_blank">
+              <img src="/img/object-5.jpg" alt="Онлайн трансляция">
+            </a>
+          </div>
+
           <button class="carousel__link" @click="showForm('Заявка на ' + type == residential ? 'Жилой объект' : 'Коммерческий объект' + '')">Оформить заявку</button>
         </div>
         <div class="content__right  content__events object__right">
@@ -50,35 +56,16 @@
               <div class="el2" style="padding-right: 12px;">
                 <ul>
                   <li>
-                    <a href="#">Свидетельство о допуске к определенным видам работ
+                    <a href="/pdf/svid.pdf" target="_blank">Свидетельство о допуске к определенным видам работ
                       члена СРО</a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/pdf/lic_bud.pdf" target="_blank">
                       Лицензия на проектные работы АВ №587591 от 15.06.2011г.
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      Сертификат на проектирование в части обеспечения
-                      механического сопротивления и стойкости
-                      АР №001015 от 20.06.2012г.
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Сертификат на проектирование в части обеспечения
-                      механического сопротивления и стойкости
-                      АР №001015 от 20.06.2012г.
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Лицензия на проектные работы АВ №587591 от 15.06.2011г.
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <a href="/pdf/lic_obst.png" target="_blank">
                       Сертификат на проектирование в части обеспечения
                       механического сопротивления и стойкости
                       АР №001015 от 20.06.2012г.

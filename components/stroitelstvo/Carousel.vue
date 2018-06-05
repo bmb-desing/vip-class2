@@ -58,6 +58,12 @@ export default {
     mounted: function() {
         const modal = this.$refs.modal
         const vm = this
+        document.addEventListener('keypress', function(e) {
+          const key = e.keyCode;
+          if(key == 27) {
+            vm.closeForm()
+          }
+        })
         modal.addEventListener('click', function(e) {
             const target = e.target.className
             if (target == 'form') {
@@ -67,10 +73,11 @@ export default {
 
     },
     beforeDestroy: function() {
-        const modal = this.$refs.modal
-        modal.removeEventListener('click', function() {
-            console.log('Успешно удален')
-        })
+      const modal = this.$refs.modal
+      modal.removeEventListener('click', function() {
+          console.log('Успешно удален')
+      })
+      document.removeEventListener('keypress', function() {})
     }
 }
 </script>

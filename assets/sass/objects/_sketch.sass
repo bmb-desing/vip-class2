@@ -110,3 +110,21 @@
         &__phone
             +fz(18)
             letter-spacing: 1px
+.translation
+  position: relative
+  margin-top: 20px
+  img
+    max-width: 100%
+    vertical-align: top
+  a
+    &::after
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      content: ''
+      position: absolute
+      background-color: rgba(#000 , .4)
+      background-image: url(~/assets/img/play-button.png)
+      background-repeat: no-repeat
+      background-position: center
