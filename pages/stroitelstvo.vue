@@ -31,10 +31,8 @@
               <span>от</span> <b>25000</b> <span>руб</span>
             </div>
             <div class="info info_blue">
-              <a href="#">
-                Сертификат на обследование <br/>
-                зданий и сооружений АЕ №000452 <br/>
-                от 23.07.2012г.
+              <a href="/pdf/lic_bud.pdf" target="_blank">
+                Лицензия на строительно-монтажные<br/> работы АВ №587591 от 15.06.2011г
               </a>
             </div>
           </div>
@@ -48,7 +46,10 @@
               {{item.name}}
             </h3>
             <div class="list__images">
-              <img :src="val.image" :alt="val.description" v-for="(val, k) in item.objects_images" :key="k" @click="getImages(index, k)">
+              <div class="list__image" v-for="(val, k) in item.objects_images" :key="k">
+                <img :src="val.image" :alt="val.description"  @click="getImages(index, k)">
+              </div>
+
             </div>
             <div v-if="item.imagesCount > item.objects_images.length" class="menu__button">
               <button @click="loadImages(item.objects_images.length, item.id, index)">Загрузить еще</button>

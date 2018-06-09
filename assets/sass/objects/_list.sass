@@ -10,30 +10,36 @@
     &__block
         padding-bottom: 30px
     &__images
-        display: flex
-        align-items: center
-        flex-wrap: wrap
-        img
-            flex-basis: 24%
-            margin-bottom: 20px
-            cursor: pointer
-            max-width: 100%
-            margin-right: 10px
-            width: 24%
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      justify-content: flex-start
+    &__image
+      flex-basis: 24%
+      cursor: pointer
+      max-width: 100%
+      margin: 0 10px 10px 0
+      width: 24%
+      max-height: 250px
+      overflow: hidden
+      position: relative
+      vertical-align: middle
+      img
+        vertical-align: bottom
+        width: 100%
+
 @media screen and (max-width: 768px)
     .list
-        &__images
-            img
-                flex-basis: 49%
-                margin-bottom: 15px
-                width: 49%
+        &__image
+          flex-basis: 48%
+          margin-bottom: 15px
+          width: 48%
         &__title
             +fz(16)
 @media screen and (max-width: 480px)
     .list
-        &__images
-            img
-                flex-basis: 100%
-                width: 100%
-                margin-bottom: 15px
-                margin-right: 0
+        &__image
+          flex-basis: 100%
+          width: 100%
+          margin-bottom: 15px
+          margin-right: 0

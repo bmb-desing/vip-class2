@@ -23,10 +23,13 @@
         </div>
         <div class="sketch__container">
           <div class="list__images">
-            <img :src="image.image" :alt="image.description" v-for="(image, k) in des" :key="image.id" @click="selectDesign(k)">
+              <div class="list__image" v-for="(image, k) in design" :key="image.id">
+                <img :src="image.image" :alt="image.name"  @click="selectDesign(k)">
+              </div>
+
           </div>
-          <div class="menu__button" v-if="des.length < count">
-            <button @click="loadImages(des.length)">Загрузить еще</button>
+          <div class="menu__button" v-if="design.length < count">
+            <button @click="loadImages(design.length)">Загрузить еще</button>
           </div>
         </div>
       </div>
@@ -48,44 +51,17 @@
     components: {
 		  Carousel
     },
+    async asyncData({app}) {
+      const design = await app.$axios.get('/design')
+      return {
+        design: design.data.design,
+        count: design.data.count
+      }
+    },
     data() {
 		  return {
         images: false,
         activeSlide: 0,
-        count: 30, //@TODO Получение с сервера
-        des: [
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки1',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки2',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки3',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки4',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки5',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки6',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки7',
-          },
-          {
-            image: '/img/bg-index.jpg',
-            description: 'Описание картинки8',
-          }]
       }
     },
     computed: {
@@ -98,12 +74,16 @@
         showCarousel: 'showCarousel'
       }),
       selectDesign(index) {
-        this.images = this.des
+        this.images = this.design
         this.activeSlide = index
         return this
       },
-      loadImages(images) {
-        //@TODO Добавить получение картинки с сервера
+      async loadImages(images) {
+        const design = await this.$axios.get('/design?skip=' + images)
+        design.data.design.map(item => {
+          this.design.push(item)
+        })
+
       },
       close() {
         this.images = null

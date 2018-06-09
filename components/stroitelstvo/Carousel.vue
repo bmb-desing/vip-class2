@@ -3,13 +3,13 @@
       <div class="slider__wrapper">
         <slick ref="slick" class="slick1" :options="slickOptions" @init="handleInit">
           <div  v-for="(val, index) in images" :key="index">
-            <img :src="val.image" :alt="val.description">
-            <p>{{val.description}}</p>
+            <img :src="val.image" :alt="val.name">
+            <p>{{val.name}}</p>
           </div>
         </slick>
         <slick ref="slick2" class="slick2" :options="slickOptions2">
           <div  v-for="(val, index) in images" :key="index">
-            <img :src="val.image" :alt="val.description">
+            <img :src="val.image" :alt="val.name">
           </div>
         </slick>
         <div class="form__cross">
@@ -58,6 +58,12 @@ export default {
     mounted: function() {
         const modal = this.$refs.modal
         const vm = this
+        document.addEventListener('keypress', function(e) {
+          const key = e.keyCode;
+          if(key == 27) {
+            vm.closeForm()
+          }
+        })
         modal.addEventListener('click', function(e) {
             const target = e.target.className
             if (target == 'form') {
@@ -67,10 +73,11 @@ export default {
 
     },
     beforeDestroy: function() {
-        const modal = this.$refs.modal
-        modal.removeEventListener('click', function() {
-            console.log('Успешно удален')
-        })
+      const modal = this.$refs.modal
+      modal.removeEventListener('click', function() {
+          console.log('Успешно удален')
+      })
+      document.removeEventListener('keypress', function() {})
     }
 }
 </script>

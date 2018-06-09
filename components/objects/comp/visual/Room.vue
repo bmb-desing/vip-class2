@@ -20,7 +20,7 @@
             <ul>
               <li>
                 <span>Этаж:</span>
-                <b>{{room.floors}}</b>
+                <b>{{room.floor}}</b>
               </li>
               <li>
                 <span>Секция:</span>
@@ -40,7 +40,7 @@
               </li>
             </ul>
             <div class="room__button">
-              <button @click="showForm('Забронировать квартиру')" class="carousel__link">Забронировать</button>
+              <button @click="showForm('Забронировать квартиру ' + room.id)" class="carousel__link">Забронировать</button>
             </div>
           </div>
         </div>

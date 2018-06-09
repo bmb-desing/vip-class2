@@ -49,10 +49,6 @@ module.exports = {
   ** Add axios globally
   */
 	build: {
-		vendor: [
-			'vue-yandex-maps',
-      '~/plugins/carousel'
-		],
 		extractCSS: true,
 		//vendor: ['vuebar'],
 		/*
