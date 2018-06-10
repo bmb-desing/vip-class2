@@ -4,11 +4,11 @@
         <span v-for="i in 10" :key="i" :class="i == getFloor ? 'active' : ''" @click="changeFloor(i)">{{i}}</span>
       </div>
       <div class="house__right" >
-        <img :src="floorImg" alt="Выбор квартиры" :class="house == 3 ? 'no-full' : 'full'">
+        <img :src="floorImg" alt="Выбор квартиры" :class="house == 2 ? 'no-full' : 'full'">
         <svg
           id="svg"
           version="1.1"
-          :viewBox="house == 3 ? '0 0 2537 415' : '0 0 1063 414'">
+          :viewBox="house == 2 ? '0 0 2537 415' : '0 0 1063 414'">
           <path v-for="(item, k) in rooms" :key="k" :d="item.svgTemplate" :class="[!item.free ? 'no-buy' : item.filter == false ? 'filter-no' : 'buy']" :data-rooms="k" :data-house="house" :data-area="item.area" :data-section="item.section"  @click="loadRoom({id: item.id, free: item.free})"></path>
         </svg>
         <div class="house__text" id="text">
