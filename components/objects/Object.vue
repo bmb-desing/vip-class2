@@ -14,24 +14,6 @@
                 </div>
                 <h2>{{object.name}}</h2>
                 <div class="sketch__content">
-                    <ul>
-                        <li>
-                        <span>Площадь:</span>
-                            <b>{{object.area}}м<sup>2</sup></b>
-                        </li>
-                        <li>
-                            <span>Комнат:</span>
-                            <b>{{object.rooms}}</b>
-                        </li>
-                        <li>
-                            <span>Этажность:</span>
-                            <b>{{object.floors}}</b>
-                        </li>
-                        <li>
-                            <span>Цена:</span>
-                            <b class="big red">{{object.price}}</b> руб
-                        </li>
-                    </ul>
                     <div class="sketch__text" v-html="object.description"></div>
                 </div>
                 <div class="sketch__footer">
