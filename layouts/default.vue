@@ -1,17 +1,20 @@
 <script src="../../stroy/store/index.js"></script>
 <template>
+  <div>
+    <you-video v-if="showVideo"></you-video>
     <div class="el1" v-bar style="height: 100vh;">
-        <div class="el2 scroller" >
-            <my-header/>
-            <my-menu/>
-            <nuxt/>
-            <contacts v-if="showContact"></contacts>
+      <div class="el2 scroller" >
+        <my-header/>
+        <my-menu/>
+        <nuxt/>
+        <contacts v-if="showContact"></contacts>
 
-            <transition name="form">
-                <user-form v-if="showForm"/>
-            </transition>
-            </div>
+        <transition name="form">
+          <user-form v-if="showForm"/>
+        </transition>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -19,6 +22,7 @@ import MyHeader from '~/components/pages/Header.vue'
 import MyMenu from '~/components/pages/MyMenu.vue'
 import UserForm from '~/components/pages/UserForm.vue'
 import Contacts from '~/components/pages/Contacts.vue'
+import YouVideo from '~/components/YouVideo'
 import {mapGetters} from 'vuex'
 export default {
   data() {
@@ -28,13 +32,15 @@ export default {
   },
 	components: {
 		MyHeader,
-        MyMenu,
-        UserForm,
-        Contacts
+    MyMenu,
+    UserForm,
+    Contacts,
+    YouVideo
 	},
   computed: {
       ...mapGetters({
-          showForm: 'showForm'
+          showForm: 'showForm',
+          showVideo: 'getVideo'
       })
   },
   mounted() {

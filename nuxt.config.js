@@ -37,7 +37,8 @@ module.exports = {
 		'~/plugins/vuebar',
     { src: '~/plugins/carousel', ssr: false },
 		{ src: '~/plugins/map', ssr: true },
-    '~/plugins/axios'
+    '~/plugins/axios',
+    '~/plugins/youtube'
 	],
 	/*
   ** Global CSS
