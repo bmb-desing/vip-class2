@@ -1,4 +1,4 @@
-.carousel 
+.carousel
     &__left
         flex-basis: 60%
     &__right
@@ -63,7 +63,7 @@
         margin: 0 auto
         display: flex
         justify-content: space-between
-        
+
     &__image
         padding-left: 10px
         img
@@ -96,17 +96,38 @@
         font-weight: 300
         padding-left: 15px
         padding-right: 30px
+    &__video
+      width: 100%
+      margin-bottom: 20px
+      cursor: pointer
+      position: relative
+      img
+        width: 100%
+        vertical-align: top
+      svg
+        position: absolute
+        top: 50%
+        width: 40px
+        height: 40px
+        left: 0
+        right: 0
+        margin: 0 auto
+        transform: translateY(-50%)
+        path
+          fill: #d00a05
 
 @media screen and (max-width: 1150px)
     .event
         display: none
+    .carousel__video
+      display: none
 @media screen and (max-width: 768px)
     .carousel
         &__container
             flex-wrap: wrap
         &__left
-            flex-basis: 100% 
-            padding-top: 50px 
+            flex-basis: 100%
+            padding-top: 50px
         &__right
             flex-basis: 100%
             align-self: flex-start
