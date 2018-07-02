@@ -38,7 +38,8 @@ module.exports = {
     { src: '~/plugins/carousel', ssr: false },
 		{ src: '~/plugins/map', ssr: true },
     '~/plugins/axios',
-    '~/plugins/youtube'
+    '~/plugins/youtube',
+    '~/plugins/popup'
 	],
 	/*
   ** Global CSS

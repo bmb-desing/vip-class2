@@ -14,22 +14,6 @@
                 </p>
                 <nuxt-link :to="slide.link" class="carousel__link">Узнать больше</nuxt-link>
             </div>
-            <div class="carousel__right">
-                <div class="carousel__content">
-                    <div class="carousel__buttons">
-                        <div class="carousel__button carousel__button_left" @click="changesSlide(pos-1)"></div>
-                        <div class="carousel__button carousel__button_right" @click="changesSlide(pos+1)"></div>
-                    </div>
-                    <div class="carousel__images">
-                        <div class="carousel__image" v-for="(value, k) in images" :key="k">
-                            <img :src="value" alt="123" v-if="k != pos">
-                        </div>
-                    </div>
-                    <div class="carousel__bottom">
-                        {{slide.subtext}}
-                    </div>
-                </div>
-            </div>
             <div class="carousel__event">
               <div class="carousel__video" @click="openVideo">
                 <img src="/img/video.jpg" alt="Видео">

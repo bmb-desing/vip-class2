@@ -1,13 +1,15 @@
 <template>
     <div class="container">
-      <div class="section section-image" style="background-color: #e1e1e1;background-image: url(/img/news-item-bg.jpg);">
+      <div class="section section-image" :style="'background-color: #e1e1e1;background-image: url('+ news.image +');'">
         <div class="content">
           <div class="content__left">
-            <h1 class="content__title">{{title}}</h1>
-            <div class="content__text">
+            <h1 class="content__title">{{news.title}}</h1>
+            <div class="content__text news">
               <div class="el1" v-bar style="height: 460px;">
-                <div class="el2" v-html="text">
-                </div>
+                  <div class="el2" style="padding-right: 20px;" ref="text">
+                    <img v-if="item.type == 'img'" v-for="(item, k) in text" :key="k" :src="item.src" v-img :alt="item.alt">
+                    <div v-else v-html="item"></div>
+                  </div>
               </div>
             </div>
           </div>
@@ -31,37 +33,58 @@
 </template>
 
 <script>
+  import cheerio from 'cheerio'
 	export default {
 		name: "news-item",
     head() {
       return {
-        title: 'Проверка заголовка'
+        title: this.news.title,
+        meta: [
+          {hid: 'description', name: 'description' , itemprop: 'description', content: this.news.description},
+          {hid: 'name', itemprop: 'name', name: 'name',  content: this.news.title},
+          {hid: 'og:title', name: 'og:title', content: this.news.title },
+          {hid: 'og:url', name: 'og:url', content: this.$route.fullPath},
+        ]
       }
     },
+
     async asyncData({app, params}) {
-      const events = await app.$axios.get('/events/get-for-news')
+		  const item = params.item
+      const news = await app.$axios.get('/news/' + item)
+      const events = await app.$axios.get('/events/get-for-news');
+      var imagesArr = []
+      const $ = cheerio.load(news.data.text, { decodeEntities: false, xmlMode: true})
+      $('img').each(function (item) {
+        const src = $(this).attr('src');
+        const alt = $(this).attr('alt') || '';
+        $(this).replaceWith('{'+ item +'}');
+        imagesArr.push({
+          type: 'img',
+          src: src,
+          alt: alt
+        })
+      })
+      const text = $.html();
+      var texts = []
+      const reg = /{[0-9]}/;
+      const textArr = text.split(reg);
+      textArr.map((value, index) => {
+        texts.push(value)
+        if(imagesArr[index]) {
+          texts.push(imagesArr[index])
+        }
+      })
+
       return {
-        events: events.data
+        news: news.data,
+        events: events.data,
+        text: texts
       }
     },
     data() {
-      return {
-        title: 'Покупка квартиры с привлечением \n' +
-        'маткапитала',
-        text: '<p>Сегодня каждая российская семья, в которой появился второй (или более) ребенок, получает право один раз воспользоваться государственной поддержкой известной как материнский семейный капитал. В 2018 году его сумма составляет 453 026 рублей.</p>' +
-        '<p>Компания «VIP CLASS» хочет максимально облегчить способ оплаты своим клиентами, поэтому с готовностью принимает материнский капитал.</p>' +
-        '<h2>Материнский капитал + собственные сбережения</h2>' +
-        '<p>Очень простой способ использовать материнский капитал. Каковы ваши шаги? Вносите полную стоимость квартиры – свои средства + мат. капитал – и получаете скидку 2% на покупку квартиры как при 100% оплате!</p>' +
-        '<h2>Материнский капитал + рассрочка</h2>' +
-        '<p>Мы принимаем материнский капитал в качестве взноса по любой из рассрочек, доступных в нашей компании!\n' +
-        'Каковы Ваши шаги? Приходите, бронируйте квартиру, оплачиваете первый взнос, оформляейте перевод денег в Пенсионном фонде на следующий из взносов и платите рассрочку по графику. Всё! Без процентов и надбавок!\n' +
-        'Важное условие: ребенку, за которого положен материнский капитал, должно исполниться 3 года.</p>',
-        background: '/img/bg-index.jpg'
-      }
-    }
+      return {}
+    },
 	}
 </script>
 
-<style>
 
-</style>

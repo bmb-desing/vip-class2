@@ -7,9 +7,8 @@
           <div class="news">
             <div class="news__item" v-for="item in news" :key="item.id">
               <nuxt-link :to="'news/' + item.alias"><h2 class="news__title">{{item.title}}</h2></nuxt-link>
-              <p class="news__date">{{item.date}}</p>
               <div class="news__text" v-html="item.shortText"></div>
-              <nuxt-link :to="'news/' + item.alias"><img :src="item.thumbnail" :alt="item.title"></nuxt-link>
+              <nuxt-link :to="'news/' + item.alias"><img :src="item.image" :alt="item.title"></nuxt-link>
               <nuxt-link :to="'news/' + item.alias" class="carousel__link">Подробнее</nuxt-link>
             </div>
           </div>
@@ -44,27 +43,13 @@ export default {
     }
   },
   async asyncData({app}) {
-    const events = await app.$axios.get('/events/get-for-news')
+    const news = await app.$axios.get('/news')
+    const events = await app.$axios.get('/events/get-for-news');
     return {
+      news: news.data,
       events: events.data
     }
   },
-  data() {
-    return {
-      news: [
-        {
-          id: 1,
-          title: 'Поздравляем победителей',
-          date: '12.03.2018',
-          shortText: 'Дорогие друзья, поздравляем победителей акции\n' +
-          '"Купи квартиру - получи телевизор в подарок!".\n' +
-          'От всей души благодарим Вас за оказанное доверие!\n' +
-          'Спасибо за Ваш выбор!',
-          thumbnail: '/img/news-bg.jpg',
-          alias: '123'
-        }
-      ]
-    }
-  }
+
 }
 </script>

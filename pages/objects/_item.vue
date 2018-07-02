@@ -108,7 +108,7 @@
                   </li>
                   <li>
                     <a href="/pdf/lic_bud.pdf" target="_blank">
-                      Лицензия на проектные работы АВ №587591 от 15.06.2011г.
+                      Лицензия на строительно-монтажные работы АВ №790/02 от 16.08.2017г
                     </a>
                   </li>
                   <li>
@@ -210,7 +210,6 @@
           x: false,
           y: true
         }
-        console.log(section)
         const scroll = VueScrollTo.scrollTo(section, 500, options)
       }
     },

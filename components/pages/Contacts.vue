@@ -43,7 +43,7 @@
                         <p>г. Севастополь, ул. Кесаева 14-Г</p>
                         <p class="contacts__small">
                             <span>Email:</span> <a href="mailto:vipclass@bk.ru">vipclass@bk.ru</a><br/>
-                            <span>Skpe:</span> vipclass.vipclass
+                            <span>Skype:</span> vipclass.vipclass
                         </p>
                         <p class="contacts__small">
                             <span>Тел:</span> <a href="tel:78692416000">+7 (8692) 41-60-00</a><br/>
